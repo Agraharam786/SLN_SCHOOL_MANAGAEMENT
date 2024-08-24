@@ -33,7 +33,8 @@ GO
 
 
 /*
-exec SLNSP_GETSTUDENTNAME 'sai','UKG'
+exec SLNSP_GETSTUDENTNAME 'UKG','A'
+exec SLNSP_GETSTUDENTNAME 'Jr Inter','MPC'
 select * from SLN_ADMISIONS
 
 SELECT *
