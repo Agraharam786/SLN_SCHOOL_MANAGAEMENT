@@ -16,4 +16,10 @@ values('General Expenses','School Maintanance',GETDATE(),'Purushotham'),
 ('Management Used','Management Used',GETDATE(),'Purushotham'),
 ('File Processing' ,'File Processing',GETDATE(),'Purushotham'),
 ('New Purchases' ,'New Purchases',GETDATE(),'Purushotham'),
-('Donation' ,'Donation',GETDATE(),'Purushotham')
+('Donation' ,'Donation',GETDATE(),'Purushotham'),
+('Branch 1 Expensess','Old Building Expenses',GETDATE(),'Purushotham'),
+('Branch 2 Expensess','New Building Expenses',GETDATE(),'Purushotham'),
+('New Building Expensess','New Building Expenses',GETDATE(),'Purushotham'),
+('Books Payment','Book Publisher Payment',GETDATE(),'Purushotham'),
+('Exam Book Lets','Exam book Lets',GETDATE(),'Purushotham'),
+('Misellanious','Other expenses',GETDATE(),'Purushotham')
