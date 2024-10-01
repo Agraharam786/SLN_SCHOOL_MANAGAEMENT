@@ -122,6 +122,8 @@ CREATE TABLE dbo.SLN_COLLECTION
 	COLLECTION_TYPE VARCHAR(50) NOT NULL,
 	[DESCRIPTION] VARCHAR(MAX),
 	COLLECTION_AMOUNT INT  NOT NULL,
+	BANK_DEPOSITED_AMOUNT INT NOT NULL,
+	IN_CASH INT NOT NULL,
 	ENTRY_DATE DATETIME,
 	IS_DELETED BIT,
 	CORRECTED_AMOUNT INT,
@@ -139,6 +141,23 @@ CREATE TABLE dbo.SLN_FEETYPE_LKP
 	LST_UPDATED_TMSP DATETIME,
 	LST_UPATED_ID VARCHAR(50),
 );
+
+DROP TABLE IF EXISTS dbo.SLN_FEEAMOUNT_LKP;
+GO
+
+-- Recreate the table
+CREATE TABLE dbo.SLN_FEEAMOUNT_LKP
+(
+    FEEAMOUNT_ID INT IDENTITY(1, 1) NOT NULL, -- Auto-incrementing primary key
+    FEE_TYPE VARCHAR(50),                    -- Type of fee (e.g., Tuition, Lab)
+    CLASS VARCHAR(50),                        -- Class associated with the fee
+    ACADEMIC_YEAR VARCHAR(50),                -- Academic year for the fee
+	AMOUNT INT,
+    [DESCRIPTION] VARCHAR(MAX),               -- Detailed description of the fee
+    LST_UPDATED_TMSP DATETIME,                -- Last updated timestamp
+    LST_UPDATED_ID VARCHAR(50)                -- ID of the user who last updated
+);
+GO
 
 DROP TABLE IF EXISTS SLN_VILLAGE_LKP
 CREATE TABLE dbo.SLN_VILLAGE_LKP
