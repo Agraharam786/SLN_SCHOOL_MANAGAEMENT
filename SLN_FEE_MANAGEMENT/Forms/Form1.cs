@@ -10,6 +10,9 @@ namespace SLN_FEE_MANAGEMENT
         private SLN_FEE_MANAGEMENT.DbHelper dbHelper;
         private string className = String.Empty;
         private string academicYear = String.Empty;
+        private string? Section = string.Empty;
+        private string? ClassName = string.Empty;
+        DataSet dsEmployee = new DataSet();
         public MainForm()
         {
             InitializeComponent();
@@ -36,9 +39,8 @@ namespace SLN_FEE_MANAGEMENT
         }
 
         private void GetGridData()
-        {
-            DataSet dsEmployee = new DataSet();
-            dsEmployee = dbHelper.GetStudentDetailsByClass(Common.GetStudentDetailsProcedure, className, academicYear);
+        {            
+            dsEmployee = dbHelper.GetStudentDetailsByClass(Common.GetStudentDetailsProcedure, className, academicYear, Section);
             if (dsEmployee.Tables[0].Rows.Count > 0)
             {
                 dataGridView1.DataSource = dsEmployee.Tables[0].DefaultView;
@@ -55,6 +57,92 @@ namespace SLN_FEE_MANAGEMENT
             }
 
         }
+
+        //private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        //{            
+        //    if (dsEmployee.Tables[0].Rows.Count > 0)
+        //    {
+        //        // Assuming "TOTAL_PAID_AMOUNT" is the name of the column in your DataGridView
+        //        var grid = sender as DataGridView;
+
+        //        // Get the value of the TOTAL_PAID_AMOUNT from the current row
+        //        var totalPaidAmountValue = grid.Rows[e.RowIndex].Cells["FEE_PAID_PERCENTAGE"].Value;
+
+        //        // Ensure that the value is not null and is a number
+        //        if (totalPaidAmountValue != null && decimal.TryParse(totalPaidAmountValue.ToString(), out decimal totalPaidAmount))
+        //        {
+        //            // Apply color based on the amount
+        //            if (totalPaidAmount == 0)
+        //            {
+        //                // Set row background color to red for unpaid students
+        //                grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+        //            }
+        //            else if (totalPaidAmount < 30)
+        //            {
+        //                // Set row background color to orange for amounts less than 5000
+        //                grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+        //            }
+        //            else if (totalPaidAmount >= 5000 && totalPaidAmount <= 10000)
+        //            {
+        //                // Set row background color to yellow for amounts between 5000 and 10000
+        //                grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
+        //            }
+        //            else
+        //            {
+        //                // Set default color for amounts greater than 10000
+        //                grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+        //            }
+        //        }
+        //    }
+        //}
+
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            if (dsEmployee.Tables[0].Rows.Count > 0)
+            {
+                var grid = sender as DataGridView;
+
+                // Get the value of the FEE_PAID_PERCENTAGE from the current row
+                var feePaidPercentageValue = grid.Rows[e.RowIndex].Cells["FEE_PAID_PERCENTAGE"].Value;
+
+                // Ensure that the value is not null and is a number
+                if (feePaidPercentageValue != null && decimal.TryParse(feePaidPercentageValue.ToString(), out decimal feePaidPercentage))
+                {
+                    // Apply color based on the fee paid percentage
+                    if (feePaidPercentage < 30)
+                    {
+                        // Set row background color to light red for very low payment
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.OrangeRed; // Light red
+                    }
+                    else if (feePaidPercentage >= 30 && feePaidPercentage < 50)
+                    {
+                        // Set row background color to yellow for low payment
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange; // Yellow
+                    }
+                    else if (feePaidPercentage >= 50 && feePaidPercentage < 80)
+                    {
+                        // Set row background color to orange for average payment
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightBlue; // Orange
+                    }
+                    else if (feePaidPercentage >= 80 && feePaidPercentage < 100)
+                    {
+                        // Set row background color to light green for good payment
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen; // Light green
+                    }
+                    else if (feePaidPercentage == 100)
+                    {
+                        // Normal payment; keep the default color (no change needed)
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White; // Default color (white)
+                    }
+                    else
+                    {
+                        // Handle cases where there is no data (optional)
+                        grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Gray; // Gray for no data
+                    }
+                }
+            }
+        }
+
 
         private void GetClassDetailsForComboBox()
         {
@@ -80,6 +168,25 @@ namespace SLN_FEE_MANAGEMENT
             }
         }
 
+        private void GetSectionTypeComboBox()
+        {
+            DataSet dsSectionType = new DataSet();
+            dsSectionType = dbHelper.GetSectionDetails(Common.GetSectionDetails, this.ClassName);
+            if (dsSectionType.Tables[0].Rows.Count > 0)
+            {
+                SectionComboBox.DataSource = dsSectionType.Tables[0].DefaultView;
+                SectionComboBox.DisplayMember = dsSectionType.Tables[0].Columns["SECTION"].ToString();
+                SectionComboBox.ValueMember = dsSectionType.Tables[0].Columns["SECTION"].ToString();
+            }
+        }
+        private void ClassComboBox_Leave(object sender, EventArgs e)
+        {
+            this.ClassName = ClassComboBox.SelectedValue.ToString();
+            if (this.ClassComboBox.SelectedValue != null && (!string.IsNullOrEmpty(ClassName)))
+            {
+                GetSectionTypeComboBox();
+            }
+        }
         private void ClassComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.className = ClassComboBox.SelectedValue.ToString();
@@ -91,6 +198,14 @@ namespace SLN_FEE_MANAGEMENT
             this.academicYear = AcademicYearComboBox.SelectedValue.ToString();
         }
 
+        private void SectionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.SectionComboBox.SelectedValue != null)
+            {
+                this.Section = SectionComboBox.SelectedValue.ToString();
+            }
+
+        }
         private void addStudentDetailsMenuItem_Click(object sender, EventArgs e)
         {
             BulkInsertStudentDetails bulkInsertStudentDetails = new BulkInsertStudentDetails();
@@ -134,7 +249,7 @@ namespace SLN_FEE_MANAGEMENT
         private void generateCollectionReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CollectionReportsForm collectionReportsForm = new CollectionReportsForm();
-            collectionReportsForm.Show();   
+            collectionReportsForm.Show();
         }
 
         private void addExpenseEntryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +262,24 @@ namespace SLN_FEE_MANAGEMENT
         {
             ExpenseReportsForm expenseReportsForm = new ExpenseReportsForm();
             expenseReportsForm.Show();
+        }
+
+        private void generateFeeReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateStudendFeeReportForm generateStudendFeeReportForm = new GenerateStudendFeeReportForm();
+            generateStudendFeeReportForm.Show();
+        }
+
+        private void classWiseFeeReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClassWiseFeeReportForm classWiseFeeReportForm = new ClassWiseFeeReportForm();
+            classWiseFeeReportForm.Show();
+        }
+
+        private void eMAILNOTIFICATIONSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmailForm email = new EmailForm();
+            email.Show();
         }
     }
 }

@@ -1,8 +1,9 @@
-D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.exe
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.dll.config
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.deps.json
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.runtimeconfig.json
+D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.dll
+D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.pdb
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
@@ -11,6 +12,7 @@ D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\runtimes\unix\lib\netco
 D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.csproj.AssemblyReference.cache
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.BulkInsertStudentDetails.resources
+D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.ClassWiseFeeReportForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.CollectionEntryForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.CollectionReportsForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.ExpenseEntryForm.resources
@@ -18,6 +20,7 @@ D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Form
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.FeeEntryForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.FeeReportsForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.MainForm.resources
+D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.GenerateStudendFeeReportForm.resources
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.csproj.GenerateResource.cache
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.GeneratedMSBuildEditorConfig.editorconfig
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.AssemblyInfoInputs.cache
@@ -28,5 +31,5 @@ D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\refint\SLN_FEE_MANAGEMENT.dll
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.pdb
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.genruntimeconfig.cache
-D:\Workspace\SLN_FEE_MANAGEMENT\bin\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.pdb
 D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\ref\SLN_FEE_MANAGEMENT.dll
+D:\Workspace\SLN_FEE_MANAGEMENT\obj\Debug\net8.0-windows\SLN_FEE_MANAGEMENT.Forms.EmailForm.resources

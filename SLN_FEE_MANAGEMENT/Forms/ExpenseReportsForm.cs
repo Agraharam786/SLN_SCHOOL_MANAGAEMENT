@@ -24,10 +24,11 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private void LoadExpenseReportDetails()
         {
             DataSet dataSet = new DataSet();
+            
             DateTime FromDate = this.FromdateTimePicker.Value.Date;
             DateTime ToDate = this.TodateTimePicker.Value.Date;
-
-            dataSet = dbHelper.GenerateExpenseTypeReport(Common.GenerateExpenseReportProcedure, this.ExpenseType, FromDate, ToDate);
+            string expenseType = this.ExpenseTypeComboBox.SelectedValue.ToString();
+            dataSet = dbHelper.GenerateExpenseTypeReport(Common.GenerateExpenseReportProcedure, expenseType, FromDate, ToDate);
             if (dataSet.Tables.Count > 0)
             {
                 dataGridView1.DataSource = dataSet.Tables[0].DefaultView;

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
@@ -21,13 +22,14 @@ namespace SLN_FEE_MANAGEMENT
         
         }
 
-        public DataSet GetStudentDetailsByClass(string procedureName, string className, string academicYear)
+        public DataSet GetStudentDetailsByClass(string procedureName, string className, string academicYear, string section)
         {
             // Assuming you have a stored procedure that filters students based on these parameters
 
             SqlParameter[] parameters = {
                 new SqlParameter("@CLASSNAME", className),
                 new SqlParameter("@ACADEMIC_YEAR", academicYear),
+                new SqlParameter("@SECTION", section)
                 };
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
@@ -82,6 +84,8 @@ namespace SLN_FEE_MANAGEMENT
                 new SqlParameter("@CollectionType", collectionModel.CollectionType),
                 new SqlParameter("@Description", collectionModel.Description),
                 new SqlParameter("@CollectionAmount", collectionModel.CollectionAmount),
+                new SqlParameter("@BankDepositAmount", collectionModel.BankDepositAmount),
+                new SqlParameter("@InCash", collectionModel.Incash),
                 new SqlParameter("@EntryDate", collectionModel.EntryDate),
                 new SqlParameter("@IsDeleted", collectionModel.IsDeleted),
                 new SqlParameter("@CorrectedAmount", collectionModel.CorrectedAmount)
@@ -193,7 +197,9 @@ namespace SLN_FEE_MANAGEMENT
             new SqlParameter("@IS_DELETED",  feeModel.IS_DELETED ),
              new SqlParameter("@DESCRIPTION",  feeModel.DESCRIPTION ),
             new SqlParameter("@CORRECTED_AMOUNT",  feeModel.CORRECTED_AMOUNT ),
-            new SqlParameter("@ADMISSION_ID",  feeModel.ADMISSION_ID )
+            new SqlParameter("@ADMISSION_ID",  feeModel.ADMISSION_ID ),
+            new SqlParameter("@SECTION",  feeModel.SECTION ),
+            new SqlParameter("@BILL_NUMBER",  feeModel.BILL_NUMBER )
             };
             return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
         }
@@ -219,11 +225,12 @@ namespace SLN_FEE_MANAGEMENT
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
 
-        public DataSet GetStudentName(string procedureName, string StudentName, string className)
+        public DataSet GetStudentName(string procedureName, string className, string section)
         {
             SqlParameter[] parameters = {
-                new SqlParameter("@STUDENT_NAME", StudentName),
-                 new SqlParameter("@CLASS", className)
+                //new SqlParameter("@STUDENT_NAME", StudentName),
+                 new SqlParameter("@CLASS", className),
+                 new SqlParameter("@SECTION", section),
                 };
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
@@ -231,6 +238,15 @@ namespace SLN_FEE_MANAGEMENT
         {
             SqlParameter[] parameters = {
                 new SqlParameter("@STUDENT_NAME", StudentName),
+                 new SqlParameter("@CLASS", className)
+
+                };
+            return UtilityInstance.GetDataSet(procedureName, parameters);
+        }
+
+        public DataSet GetSectionDetails(string procedureName,  string className)
+        {
+            SqlParameter[] parameters = {               
                  new SqlParameter("@CLASS", className)
 
                 };
@@ -286,6 +302,33 @@ namespace SLN_FEE_MANAGEMENT
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
 
+        public DataSet GenerateStudentFeeReport(string procedureName, string Class, string AcademicYear, string section, string studendName)
+        {
+            SqlParameter[] parameters = {
+                new SqlParameter("@CLASS", Class),
+                new SqlParameter("@ACADEMIC_YEAR", AcademicYear),
+                 new SqlParameter("@SECTION", section),
+                 new SqlParameter("@STUDENT_NAME", studendName)
+                };
+            return UtilityInstance.GetDataSet(procedureName, parameters);
+        }
+
+        public DataSet GenerateClassWiseFeeReport(string procedureName, string Class, string AcademicYear, string section)
+        {
+            SqlParameter[] parameters = {
+                new SqlParameter("@CLASS", Class),
+                new SqlParameter("@ACADEMIC_YEAR", AcademicYear),
+                 new SqlParameter("@SECTION", section)
+                };
+            return UtilityInstance.GetDataSet(procedureName, parameters);
+        }
+
+        public DataSet GetAmountsForEmailSummary(string procedureName)
+        {
+            SqlParameter[] parameters = {
+                };
+            return UtilityInstance.GetDataSet(procedureName, parameters);
+        }
     }
 }
 

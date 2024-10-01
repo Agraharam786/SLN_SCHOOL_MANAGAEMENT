@@ -30,7 +30,8 @@ namespace SLN_FEE_MANAGEMENT
         public const string InsertandUpdateFeeProcedure = "SLNSP_INSERTORUPDATEFEEPAYMENT";
         public const string GetSavedFeeDetailsProcedure = "SLNSP_GETSAVEDFEEDETAILS";
         public const string DeleteFeeProcedure = "SLNSP_DELETEFEEDETAILS";
-         
+        public const string GetSectionDetails = "SLNSP_GETSECTIONDETAILS";
+
         public const string SummaryFeeProcedure = "SLNSP_GETSUMMARYFEEDETAILS";
         public const string SummaryCollectionProcedure = "SLNSP_GETSUMMARYCOLLECTIONDETAILS";
         public const string SummaryExpenseProcedure = "SLNSP_GETSUMMARYEXPENSEDETAILS";
@@ -39,6 +40,13 @@ namespace SLN_FEE_MANAGEMENT
         public const string GenerateFeeTypeReportProcedure = "SLNSP_GETFEEREPORT_BYFEETYPE";
         public const string GenerateCollectioneReportProcedure = "SLNSP_GETCOLLECTIONREPORT";
         public const string GenerateExpenseReportProcedure = "SLNSP_GETEXPENSEREPORT";
+
+        public const string GenerateStudentFeeReportProcedure = "SLNSP_GETSTUDENTFEEREPORTS";
+        public const string GenerateClassFeeReportProcedure = "SLNSP_GETCLASSFEEREPORTS";
+
+        public const string EmailSummaryProcedure = "SLNSP_GETEMAIL_FIANACIALSUMMARY"; 
+
+
 
 
 

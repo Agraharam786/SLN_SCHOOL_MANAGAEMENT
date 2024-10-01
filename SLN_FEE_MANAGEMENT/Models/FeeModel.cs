@@ -22,6 +22,8 @@ namespace SLN_FEE_MANAGEMENT.Models
         public string? GENDER { get; set; }
         public bool IS_DELETED { get; set; }
         public string? DESCRIPTION { get; set; }
+        public string? SECTION { get; set; }
+        public string? BILL_NUMBER { get; set; }
         public int? CORRECTED_AMOUNT { get; set; }
         public int ADMISSION_ID { get; set; }
         public DateTime LST_UPDATED_TMSP { get; set; }

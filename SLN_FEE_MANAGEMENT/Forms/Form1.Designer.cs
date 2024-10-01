@@ -45,7 +45,11 @@ namespace SLN_FEE_MANAGEMENT
             genereateFeeReportsToolStripMenuItem = new ToolStripMenuItem();
             aDDFEEToolStripMenuItem = new ToolStripMenuItem();
             studentReportsToolStripMenuItem = new ToolStripMenuItem();
+            generateFeeReportsToolStripMenuItem = new ToolStripMenuItem();
+            classWiseFeeReportsToolStripMenuItem = new ToolStripMenuItem();
             busFeeDetailsToolStripMenuItem = new ToolStripMenuItem();
+            nOTIFICATIONSToolStripMenuItem = new ToolStripMenuItem();
+            eMAILNOTIFICATIONSToolStripMenuItem = new ToolStripMenuItem();
             label2 = new Label();
             label3 = new Label();
             ClassComboBox = new ComboBox();
@@ -53,6 +57,8 @@ namespace SLN_FEE_MANAGEMENT
             label10 = new Label();
             summaryDataGridView = new DataGridView();
             label1 = new Label();
+            label4 = new Label();
+            SectionComboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)summaryDataGridView).BeginInit();
@@ -62,7 +68,7 @@ namespace SLN_FEE_MANAGEMENT
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(774, 109);
+            button1.Location = new Point(762, 111);
             button1.Name = "button1";
             button1.Size = new Size(95, 32);
             button1.TabIndex = 0;
@@ -82,11 +88,12 @@ namespace SLN_FEE_MANAGEMENT
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.Size = new Size(1240, 451);
             dataGridView1.TabIndex = 1;
+            dataGridView1.RowPostPaint += dataGridView1_RowPostPaint;
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.DarkSeaGreen;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { addStudentDetailsMenuItem, collectionEntryStripMenuItem, expensesEntryToolStripMenuItem, feeReportsToolStripMenuItem, studentReportsToolStripMenuItem, busFeeDetailsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { addStudentDetailsMenuItem, collectionEntryStripMenuItem, expensesEntryToolStripMenuItem, feeReportsToolStripMenuItem, studentReportsToolStripMenuItem, busFeeDetailsToolStripMenuItem, nOTIFICATIONSToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 2, 0, 2);
@@ -181,12 +188,27 @@ namespace SLN_FEE_MANAGEMENT
             // 
             // studentReportsToolStripMenuItem
             // 
+            studentReportsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { generateFeeReportsToolStripMenuItem, classWiseFeeReportsToolStripMenuItem });
             studentReportsToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             studentReportsToolStripMenuItem.ForeColor = Color.Red;
             studentReportsToolStripMenuItem.Name = "studentReportsToolStripMenuItem";
             studentReportsToolStripMenuItem.Size = new Size(166, 27);
             studentReportsToolStripMenuItem.Text = "STUDENT REPORTS";
             studentReportsToolStripMenuItem.ToolTipText = "To View Added Student Details ";
+            // 
+            // generateFeeReportsToolStripMenuItem
+            // 
+            generateFeeReportsToolStripMenuItem.Name = "generateFeeReportsToolStripMenuItem";
+            generateFeeReportsToolStripMenuItem.Size = new Size(245, 26);
+            generateFeeReportsToolStripMenuItem.Text = "Generate Fee Reports";
+            generateFeeReportsToolStripMenuItem.Click += generateFeeReportsToolStripMenuItem_Click;
+            // 
+            // classWiseFeeReportsToolStripMenuItem
+            // 
+            classWiseFeeReportsToolStripMenuItem.Name = "classWiseFeeReportsToolStripMenuItem";
+            classWiseFeeReportsToolStripMenuItem.Size = new Size(245, 26);
+            classWiseFeeReportsToolStripMenuItem.Text = "Class Wise Fee Reports";
+            classWiseFeeReportsToolStripMenuItem.Click += classWiseFeeReportsToolStripMenuItem_Click;
             // 
             // busFeeDetailsToolStripMenuItem
             // 
@@ -197,13 +219,30 @@ namespace SLN_FEE_MANAGEMENT
             busFeeDetailsToolStripMenuItem.Text = "BUS FEE DETAILS";
             busFeeDetailsToolStripMenuItem.ToolTipText = "To View Bus Fee Details";
             // 
+            // nOTIFICATIONSToolStripMenuItem
+            // 
+            nOTIFICATIONSToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { eMAILNOTIFICATIONSToolStripMenuItem });
+            nOTIFICATIONSToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            nOTIFICATIONSToolStripMenuItem.ForeColor = Color.Red;
+            nOTIFICATIONSToolStripMenuItem.Name = "nOTIFICATIONSToolStripMenuItem";
+            nOTIFICATIONSToolStripMenuItem.Size = new Size(143, 27);
+            nOTIFICATIONSToolStripMenuItem.Text = "NOTIFICATIONS";
+            // 
+            // eMAILNOTIFICATIONSToolStripMenuItem
+            // 
+            eMAILNOTIFICATIONSToolStripMenuItem.ForeColor = Color.Red;
+            eMAILNOTIFICATIONSToolStripMenuItem.Name = "eMAILNOTIFICATIONSToolStripMenuItem";
+            eMAILNOTIFICATIONSToolStripMenuItem.Size = new Size(251, 26);
+            eMAILNOTIFICATIONSToolStripMenuItem.Text = "EMAIL NOTIFICATIONS";
+            eMAILNOTIFICATIONSToolStripMenuItem.Click += eMAILNOTIFICATIONSToolStripMenuItem_Click;
+            // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.RoyalBlue;
             label2.Location = new Point(30, 113);
             label2.Name = "label2";
-            label2.Size = new Size(114, 32);
+            label2.Size = new Size(98, 32);
             label2.TabIndex = 4;
             label2.Text = "Select Class :";
             // 
@@ -211,27 +250,28 @@ namespace SLN_FEE_MANAGEMENT
             // 
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.RoyalBlue;
-            label3.Location = new Point(390, 113);
+            label3.Location = new Point(269, 114);
             label3.Name = "label3";
-            label3.Size = new Size(137, 32);
+            label3.Size = new Size(125, 32);
             label3.TabIndex = 5;
             label3.Text = "Academic Year :";
             // 
             // ClassComboBox
             // 
             ClassComboBox.FormattingEnabled = true;
-            ClassComboBox.Location = new Point(151, 113);
+            ClassComboBox.Location = new Point(134, 114);
             ClassComboBox.Name = "ClassComboBox";
-            ClassComboBox.Size = new Size(221, 25);
+            ClassComboBox.Size = new Size(129, 25);
             ClassComboBox.TabIndex = 6;
             ClassComboBox.SelectedIndexChanged += ClassComboBox_SelectedIndexChanged;
+            ClassComboBox.Leave += ClassComboBox_Leave;
             // 
             // AcademicYearComboBox
             // 
             AcademicYearComboBox.FormattingEnabled = true;
-            AcademicYearComboBox.Location = new Point(534, 114);
+            AcademicYearComboBox.Location = new Point(391, 114);
             AcademicYearComboBox.Name = "AcademicYearComboBox";
-            AcademicYearComboBox.Size = new Size(221, 25);
+            AcademicYearComboBox.Size = new Size(148, 25);
             AcademicYearComboBox.TabIndex = 7;
             AcademicYearComboBox.SelectedIndexChanged += AcademicYearComboBox_SelectedIndexChanged;
             // 
@@ -273,12 +313,33 @@ namespace SLN_FEE_MANAGEMENT
             label1.TabIndex = 72;
             label1.Text = "Student Summary Details";
             // 
+            // label4
+            // 
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.RoyalBlue;
+            label4.Location = new Point(545, 115);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 32);
+            label4.TabIndex = 73;
+            label4.Text = "Section :";
+            // 
+            // SectionComboBox
+            // 
+            SectionComboBox.FormattingEnabled = true;
+            SectionComboBox.Location = new Point(616, 115);
+            SectionComboBox.Name = "SectionComboBox";
+            SectionComboBox.Size = new Size(140, 25);
+            SectionComboBox.TabIndex = 74;
+            SectionComboBox.SelectedIndexChanged += SectionComboBox_SelectedIndexChanged;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
             ClientSize = new Size(1267, 605);
+            Controls.Add(SectionComboBox);
+            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(summaryDataGridView);
             Controls.Add(label10);
@@ -327,5 +388,11 @@ namespace SLN_FEE_MANAGEMENT
         private ToolStripMenuItem addCollectionEntryToolStripMenuItem;
         private ToolStripMenuItem generateExpenseReportsToolStripMenuItem;
         private ToolStripMenuItem addExpenseEntryToolStripMenuItem;
+        private ToolStripMenuItem generateFeeReportsToolStripMenuItem;
+        private ToolStripMenuItem classWiseFeeReportsToolStripMenuItem;
+        private Label label4;
+        private ComboBox SectionComboBox;
+        private ToolStripMenuItem nOTIFICATIONSToolStripMenuItem;
+        private ToolStripMenuItem eMAILNOTIFICATIONSToolStripMenuItem;
     }
 }

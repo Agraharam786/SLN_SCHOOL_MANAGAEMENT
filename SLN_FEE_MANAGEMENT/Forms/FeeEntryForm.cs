@@ -26,6 +26,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private string? Village = string.Empty;
         private string? Gender = string.Empty;
         private string? Mobile_Number = string.Empty;
+        private string? Section = string.Empty;
         public FeeEntryForm()
         {
             InitializeComponent();
@@ -75,21 +76,36 @@ namespace SLN_FEE_MANAGEMENT.Forms
             }
         }
 
+        private void GetSectionTypeComboBox()
+        {
+            DataSet dsSectionType = new DataSet();
+            dsSectionType = dbHelper.GetSectionDetails(Common.GetSectionDetails, this.ClassName);
+            if (dsSectionType.Tables[0].Rows.Count > 0)
+            {
+                sectionComboBox.DataSource = dsSectionType.Tables[0].DefaultView;
+                sectionComboBox.DisplayMember = dsSectionType.Tables[0].Columns["SECTION"].ToString();
+                sectionComboBox.ValueMember = dsSectionType.Tables[0].Columns["SECTION"].ToString();
+            }
+        }
+
         private void ClearAllFileds()
         {
             this.FeeId = 0;
             this.ClassComboBox.SelectedValue = string.Empty;
             this.AcademicYearComboBox.SelectedValue = string.Empty;
             this.FeeTypeComboBox.SelectedValue = string.Empty;
-            this.DescTextBox.Text = string.Empty;
+            this.sectionComboBox.SelectedValue = string.Empty;
+            this.DescriptionTextBox.Text = string.Empty;
             this.AmountTextBox.Text = string.Empty;
             this.dateTimePicker1.Value = DateTime.Now;
             this.StudentNameComboBox.Text = string.Empty;
             this.FatherNameTextBox.Text = string.Empty;
             this.VillageNameTextBox.Text = string.Empty;
+            this.BillNoTextBox.Text = string.Empty;
             this.UnEditedAmount = 0;
             this.SaveButton.Enabled = false;
             this.DeleteButton.Enabled = false;
+            this.Section = string.Empty;
             LoadFeeSummaryDetails();
         }
 
@@ -122,17 +138,17 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private void StudentNameComboBox_TextChanged(object sender, EventArgs e)
         {
             this.StudentName = StudentNameComboBox.Text.ToString().Trim();
-            if (StudentName.Length > 2 && (!string.IsNullOrEmpty(this.ClassName)))
-            {
-                GetStudentNameComboBox(this.StudentName, this.ClassName);
-            }
+            //if (StudentName.Length > 2 && (!string.IsNullOrEmpty(this.ClassName)))
+            //{
+            //    GetStudentNameComboBox(this.StudentName, this.ClassName);
+            //}
 
         }
-        private void GetStudentNameComboBox(string studentName, string className)
+        private void GetStudentNameComboBox(string className, string section)
         {
             DataSet dsStudentType = new DataSet();
 
-            dsStudentType = dbHelper.GetStudentName(Common.GetStudentNameProcedure, studentName, className);
+            dsStudentType = dbHelper.GetStudentName(Common.GetStudentNameProcedure, this.ClassName, this.Section);
             if (dsStudentType.Tables[0].Rows.Count > 0)
             {
                 StudentNameComboBox.DataSource = dsStudentType.Tables[0].DefaultView;
@@ -151,6 +167,17 @@ namespace SLN_FEE_MANAGEMENT.Forms
             }
 
         }
+
+
+        private void SectionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.sectionComboBox.SelectedValue != null)
+            {
+                this.Section = sectionComboBox.SelectedValue.ToString();
+            }
+
+        }
+
         private void StudentNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.StudentNameComboBox.SelectedValue != null)
@@ -184,7 +211,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
                 GetFatherName(StudentName, this.ClassName);
             }
         }
-
+        
         private void SaveButton_Click(object sender, EventArgs e)
         {
             int returnValue = 0;
@@ -205,14 +232,16 @@ namespace SLN_FEE_MANAGEMENT.Forms
                     }
                     feeModel.CLASS = this.ClassName;
                     feeModel.ACADEMIC_YEAR = this.AcdameicYear;
-                    feeModel.FEE_TYPE = FeeType;
+                    feeModel.FEE_TYPE = this.FeeType;
                     feeModel.STUDENT_NAME = this.StudentName;
                     feeModel.FATHER_NAME = this.FatherName;
-                    feeModel.VILLAGE_NAME = this.VillageNameTextBox.Text.ToString().Trim();
+                    feeModel.VILLAGE_NAME = this.VillageNameTextBox.Text.Trim();
                     feeModel.GENDER = Gender;
                     feeModel.MOBILE_NUM = this.Mobile_Number;
                     feeModel.PAID_AMOUNT = feePaidAmount;
-                    feeModel.DESCRIPTION = this.DescTextBox.Text.Trim();
+                    feeModel.BILL_NUMBER = BillNoTextBox.Text.ToString().Trim();
+                    feeModel.SECTION = this.Section;
+                    feeModel.DESCRIPTION = this.DescriptionTextBox.Text.Trim();
                     feeModel.PAID_DATE = DateTime.ParseExact(dateTimePicker1.Value.ToString("yyyyMMdd"), "yyyyMMdd", CultureInfo.InvariantCulture);
                     feeModel.IS_DELETED = false;
                     feeModel.ADMISSION_ID = AdmissionId;
@@ -301,32 +330,41 @@ namespace SLN_FEE_MANAGEMENT.Forms
             GetAllSavedFeeDetails();
         }
 
+       
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[index];
             if (row != null && (!string.IsNullOrEmpty(row.Cells[0].Value.ToString())))
             {
-                FeeId = Convert.ToInt32(row.Cells[0].Value);
-                this.FeeType = row.Cells[1].Value.ToString();
+
+                FeeId = Convert.ToInt32(row.Cells[0].Value);  //FEE_ID
+
+                this.FeeType = row.Cells[1].Value.ToString();  //FEE_TYPE
                 FeeTypeComboBox.SelectedValue = this.FeeType;
                 StudentNameComboBox.SelectedText = "";
-                StudentName = row.Cells[2].Value.ToString();
+                StudentName = row.Cells[2].Value.ToString();    //STUDENT_NAME
                 StudentNameComboBox.SelectedText = StudentName.ToString();
                 StudentNameComboBox.SelectedValue = StudentName.ToString();
-                this.FatherName = row.Cells[3].Value.ToString();
+                this.FatherName = row.Cells[3].Value.ToString(); //FATHER_NAME
                 FatherNameTextBox.Text = this.FatherName;
-                this.ClassName = row.Cells[4].Value.ToString();
+                this.ClassName = row.Cells[8].Value.ToString(); //CLASS
                 ClassComboBox.SelectedValue = this.ClassName;
-                this.UnEditedAmount = Convert.ToInt32(row.Cells[5].Value.ToString());
-                AmountTextBox.Text = row.Cells[5].Value.ToString();
-                DescTextBox.Text = row.Cells[6].Value.ToString();
-                this.AcdameicYear = row.Cells[7].Value.ToString();
+                this.AcdameicYear = row.Cells[10].Value.ToString();      //ACADEMIC_YEAR
                 AcademicYearComboBox.SelectedValue = this.AcdameicYear;
-                dateTimePicker1.Value = DateTime.Parse(row.Cells[8].Value.ToString());
-                this.Village = row.Cells[9].Value.ToString();
+                GetSectionTypeComboBox();
+                this.Section= row.Cells[9].Value.ToString().Trim();
+                this.sectionComboBox.SelectedValue = this.Section;  //SECTION
+                //SectionComboBox.SelectedText = this.Section;
+                this.UnEditedAmount = Convert.ToInt32(row.Cells[5].Value.ToString());   //PAID_AMOUNT
+                AmountTextBox.Text = row.Cells[5].Value.ToString();     //PAID_AMOUNT
+                this.BillNoTextBox.Text = row.Cells[6].Value.ToString();    //BILL_NUMBER
+                this.DescriptionTextBox.Text= row.Cells[7].Value.ToString();    //DESCRIPTION
+                
+                dateTimePicker1.Value = DateTime.Parse(row.Cells[4].Value.ToString());  //PAID_DATE
+                this.Village = row.Cells[11].Value.ToString();       //VILLAGE_NAME
                 VillageNameTextBox.Text = this.Village;
-                AdmissionId = Convert.ToInt32(row.Cells[10].Value.ToString());
+                AdmissionId = Convert.ToInt32(row.Cells[12].Value.ToString());  //ADMISSION_ID
                 this.DeleteButton.Enabled = true;
                 this.SaveButton.Enabled = true;
             }
@@ -368,6 +406,25 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ClassComboBox_Leave(object sender, EventArgs e)
+        {
+            this.ClassName = ClassComboBox.SelectedValue.ToString();
+            if (this.ClassComboBox.SelectedValue != null && (!string.IsNullOrEmpty(ClassName)))
+            {
+                GetSectionTypeComboBox();
+            }
+        }
+
+        private void StudentNameComboBox_Click(object sender, EventArgs e)
+        {
+            this.ClassName = ClassComboBox.SelectedValue.ToString();
+            this.Section = sectionComboBox.SelectedValue.ToString();
+            if (this.sectionComboBox.SelectedValue != null && (!string.IsNullOrEmpty(ClassName)))
+            {
+                GetStudentNameComboBox(this.ClassName, this.Section);
+            }
         }
     }
 }

@@ -4,10 +4,16 @@
     <Compile Update="Forms\BulkInsertStudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ClassWiseFeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\CollectionEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\CollectionReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\EmailForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\ExpenseEntryForm.cs">
@@ -23,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\GenerateStudendFeeReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

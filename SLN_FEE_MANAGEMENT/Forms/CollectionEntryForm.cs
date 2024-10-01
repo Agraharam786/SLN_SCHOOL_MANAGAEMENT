@@ -77,6 +77,8 @@ namespace SLN_FEE_MANAGEMENT.Forms
                     collectionModel.CollectionType = this.CollectionTypeComboBox.SelectedValue.ToString();
                     collectionModel.Description = this.DescTextBox.Text.Trim();
                     collectionModel.CollectionAmount = CollectionAmount;
+                    collectionModel.BankDepositAmount = Convert.ToInt32(this.bankDepositTextBox.Text.Trim());
+                    collectionModel.Incash = Convert.ToInt32(this.InCashTextBox.Text.Trim());
                     collectionModel.EntryDate = DateTime.ParseExact(dateTimePicker1.Value.ToString("yyyyMMdd"), "yyyyMMdd", CultureInfo.InvariantCulture);
                     collectionModel.IsDeleted = false;
 
@@ -114,6 +116,8 @@ namespace SLN_FEE_MANAGEMENT.Forms
             this.CollectionId = 0;
             this.SaveButton.Enabled = false;
             this.DeleteButton.Enabled = false;
+            this.bankDepositTextBox.Text = string.Empty;
+            this.InCashTextBox.Text = string.Empty;
             LoadCollectionSummaryDetails();
         }
 
@@ -141,7 +145,6 @@ namespace SLN_FEE_MANAGEMENT.Forms
             }
 
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
@@ -149,11 +152,13 @@ namespace SLN_FEE_MANAGEMENT.Forms
             if (row != null && (!string.IsNullOrEmpty(row.Cells[0].Value.ToString())))
             {
                 CollectionId = Convert.ToInt32(row.Cells[0].Value);
-                UnEditedAmount = Convert.ToInt32(row.Cells[3].Value.ToString());
                 CollectionTypeComboBox.SelectedValue = row.Cells[1].Value;
-                DescTextBox.Text = row.Cells[2].Value.ToString();
+                UnEditedAmount = Convert.ToInt32(row.Cells[2].Value.ToString());
+                this.bankDepositTextBox.Text= row.Cells[3].Value.ToString();
+                this.InCashTextBox.Text = row.Cells[4].Value.ToString();
+                DescTextBox.Text = row.Cells[5].Value.ToString();
                 AmountTextBox.Text = UnEditedAmount.ToString();
-                dateTimePicker1.Value = DateTime.Parse(row.Cells[4].Value.ToString());
+                dateTimePicker1.Value = DateTime.Parse(row.Cells[6].Value.ToString());
                 DeleteButton.Enabled = true;
             }
             else
@@ -219,6 +224,25 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bankDepositTextBox_Leave(object sender, EventArgs e)
+        {
+            int collectionAmount = (Convert.ToInt32(this.AmountTextBox.Text));
+
+            if (!string.IsNullOrEmpty(this.AmountTextBox.Text) && (Convert.ToInt32(this.AmountTextBox.Text) > 0))
+            {
+                int bankDepositedAmount = Convert.ToInt32(this.bankDepositTextBox.Text);
+                
+                if(bankDepositedAmount>collectionAmount)
+                    MessageBox.Show("Deposit Amount is greater than Collection Amount ", "Validation Message", MessageBoxButtons.OK);
+                else
+                    this.InCashTextBox.Text = ((collectionAmount) - (bankDepositedAmount)).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Enter valid collection amount before you submit to bank! ", "Validation Message", MessageBoxButtons.OK);
+            }
         }
     }
 }

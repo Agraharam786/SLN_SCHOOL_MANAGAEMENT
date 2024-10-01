@@ -49,6 +49,10 @@
             button1 = new Button();
             summaryDataGridView = new DataGridView();
             CloseButton = new Button();
+            bankDepositTextBox = new TextBox();
+            label7 = new Label();
+            InCashTextBox = new TextBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)summaryDataGridView).BeginInit();
             SuspendLayout();
@@ -56,9 +60,9 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(150, 203);
+            dateTimePicker1.Location = new Point(152, 289);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(211, 21);
+            dateTimePicker1.Size = new Size(235, 21);
             dateTimePicker1.TabIndex = 29;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -66,7 +70,7 @@
             // 
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.RoyalBlue;
-            label6.Location = new Point(12, 203);
+            label6.Location = new Point(12, 289);
             label6.Name = "label6";
             label6.Size = new Size(120, 28);
             label6.TabIndex = 28;
@@ -75,16 +79,16 @@
             // DescTextBox
             // 
             DescTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            DescTextBox.Location = new Point(150, 154);
+            DescTextBox.Location = new Point(152, 244);
             DescTextBox.Name = "DescTextBox";
-            DescTextBox.Size = new Size(211, 22);
+            DescTextBox.Size = new Size(235, 22);
             DescTextBox.TabIndex = 27;
             // 
             // label5
             // 
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.RoyalBlue;
-            label5.Location = new Point(12, 154);
+            label5.Location = new Point(12, 244);
             label5.Name = "label5";
             label5.Size = new Size(120, 28);
             label5.TabIndex = 26;
@@ -93,9 +97,9 @@
             // AmountTextBox
             // 
             AmountTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            AmountTextBox.Location = new Point(150, 112);
+            AmountTextBox.Location = new Point(187, 112);
             AmountTextBox.Name = "AmountTextBox";
-            AmountTextBox.Size = new Size(211, 22);
+            AmountTextBox.Size = new Size(200, 22);
             AmountTextBox.TabIndex = 25;
             AmountTextBox.TextChanged += AmountTextBox_TextChanged;
             AmountTextBox.KeyPress += AmountTextBox_KeyPress;
@@ -114,9 +118,9 @@
             // 
             CollectionTypeComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CollectionTypeComboBox.FormattingEnabled = true;
-            CollectionTypeComboBox.Location = new Point(150, 73);
+            CollectionTypeComboBox.Location = new Point(187, 73);
             CollectionTypeComboBox.Name = "CollectionTypeComboBox";
-            CollectionTypeComboBox.Size = new Size(211, 24);
+            CollectionTypeComboBox.Size = new Size(200, 24);
             CollectionTypeComboBox.TabIndex = 23;
             CollectionTypeComboBox.SelectedIndexChanged += CollectionTypeComboBox_SelectedIndexChanged;
             // 
@@ -134,7 +138,7 @@
             // 
             SaveButton.BackColor = Color.DeepSkyBlue;
             SaveButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SaveButton.Location = new Point(211, 258);
+            SaveButton.Location = new Point(258, 344);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(95, 28);
             SaveButton.TabIndex = 17;
@@ -161,7 +165,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(603, 379);
+            dataGridView1.Size = new Size(705, 379);
             dataGridView1.TabIndex = 30;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -169,7 +173,7 @@
             // 
             DeleteButton.BackColor = Color.LightCoral;
             DeleteButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DeleteButton.Location = new Point(30, 313);
+            DeleteButton.Location = new Point(63, 399);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(94, 28);
             DeleteButton.TabIndex = 31;
@@ -181,7 +185,7 @@
             // 
             ClearButton.BackColor = Color.LightCoral;
             ClearButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ClearButton.Location = new Point(211, 313);
+            ClearButton.Location = new Point(258, 399);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(95, 28);
             ClearButton.TabIndex = 32;
@@ -193,7 +197,7 @@
             // 
             AddNewButton.BackColor = Color.DeepSkyBlue;
             AddNewButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AddNewButton.Location = new Point(30, 258);
+            AddNewButton.Location = new Point(63, 344);
             AddNewButton.Name = "AddNewButton";
             AddNewButton.Size = new Size(94, 28);
             AddNewButton.TabIndex = 33;
@@ -225,7 +229,7 @@
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(611, 471);
+            button1.Location = new Point(563, 533);
             button1.Name = "button1";
             button1.Size = new Size(119, 28);
             button1.TabIndex = 36;
@@ -242,7 +246,7 @@
             summaryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             summaryDataGridView.ColumnHeadersHeight = 25;
             summaryDataGridView.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            summaryDataGridView.Location = new Point(12, 359);
+            summaryDataGridView.Location = new Point(12, 465);
             summaryDataGridView.Name = "summaryDataGridView";
             summaryDataGridView.ReadOnly = true;
             summaryDataGridView.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -255,7 +259,7 @@
             // 
             CloseButton.BackColor = Color.LightCoral;
             CloseButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CloseButton.Location = new Point(802, 471);
+            CloseButton.Location = new Point(847, 533);
             CloseButton.Name = "CloseButton";
             CloseButton.Size = new Size(101, 28);
             CloseButton.TabIndex = 38;
@@ -263,12 +267,53 @@
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += button2_Click;
             // 
+            // bankDepositTextBox
+            // 
+            bankDepositTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            bankDepositTextBox.Location = new Point(187, 154);
+            bankDepositTextBox.Name = "bankDepositTextBox";
+            bankDepositTextBox.Size = new Size(200, 22);
+            bankDepositTextBox.TabIndex = 40;
+            bankDepositTextBox.Leave += bankDepositTextBox_Leave;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.RoyalBlue;
+            label7.Location = new Point(12, 154);
+            label7.Name = "label7";
+            label7.Size = new Size(179, 28);
+            label7.TabIndex = 39;
+            label7.Text = "Bank Deposit Amount :";
+            // 
+            // InCashTextBox
+            // 
+            InCashTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            InCashTextBox.Location = new Point(187, 200);
+            InCashTextBox.Name = "InCashTextBox";
+            InCashTextBox.Size = new Size(200, 22);
+            InCashTextBox.TabIndex = 42;
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.RoyalBlue;
+            label8.Location = new Point(12, 200);
+            label8.Name = "label8";
+            label8.Size = new Size(135, 28);
+            label8.TabIndex = 41;
+            label8.Text = "Amount In Cash:";
+            // 
             // CollectionEntryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
-            ClientSize = new Size(1014, 524);
+            ClientSize = new Size(1136, 641);
+            Controls.Add(InCashTextBox);
+            Controls.Add(label8);
+            Controls.Add(bankDepositTextBox);
+            Controls.Add(label7);
             Controls.Add(CloseButton);
             Controls.Add(summaryDataGridView);
             Controls.Add(button1);
@@ -315,5 +360,9 @@
         private Button button1;
         private DataGridView summaryDataGridView;
         private Button CloseButton;
+        private TextBox bankDepositTextBox;
+        private Label label7;
+        private TextBox InCashTextBox;
+        private Label label8;
     }
 }
