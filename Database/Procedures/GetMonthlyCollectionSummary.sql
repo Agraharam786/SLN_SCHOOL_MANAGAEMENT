@@ -18,7 +18,7 @@ BEGIN
         SELECT 
             UPPER(LEFT(DATENAME(MONTH, DATEFROMPARTS(YEAR(ENTRY_DATE), MONTH(ENTRY_DATE), 1)), 3)) + '' '' + CAST(YEAR(ENTRY_DATE) AS NVARCHAR) AS Month,
             ';
-    
+
     -- Dynamically generate the collection types
     SET @collection_types = '';
     
@@ -92,21 +92,38 @@ BEGIN
         WHERE ENTRY_DATE >= DATEADD(MONTH, -12, GETDATE())
     )
     SELECT
-        Month,
-        [Degree],
-        [Higher],
-        [Jr College],
-        [Kindergarten],
-        [Open Degree],
-        [Open Inter],
-        [Open School],
-        [Primary],
+        Month,';
+
+    -- Dynamically add the collection types to the final SELECT statement
+    SET @cursor = CURSOR FOR
+        SELECT DISTINCT COLLECTION_TYPE
+        FROM SLN_COLLECTION;
+
+    OPEN @cursor;
+    FETCH NEXT FROM @cursor INTO @collection_types;
+
+    -- Dynamically add the collection types to the final SELECT statement
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+        SET @sql = @sql + '[' + @collection_types + '],';
+        FETCH NEXT FROM @cursor INTO @collection_types;
+    END;
+
+    -- Close and deallocate the cursor
+    CLOSE @cursor;
+    DEALLOCATE @cursor;
+
+    -- Remove the trailing comma from the last collection type
+    SET @sql = LEFT(@sql, LEN(@sql) - 1);
+
+    -- Add the Total_Amount column to the final SELECT statement
+    SET @sql = @sql + ',
         Total_Amount
     FROM CTE_Collection
     ORDER BY Year DESC, MonthNum DESC;';
 
     -- Print dynamic SQL for debugging (can be removed later)
-    --PRINT @sql;
+    -- PRINT @sql;
 
     -- Execute the dynamic SQL
     EXEC sp_executesql @sql;

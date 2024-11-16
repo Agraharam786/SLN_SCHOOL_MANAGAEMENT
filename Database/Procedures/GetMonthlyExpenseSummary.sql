@@ -92,13 +92,32 @@ BEGIN
         WHERE ENTRY_DATE >= DATEADD(MONTH, -12, GETDATE())
     )
     SELECT
-        Month,
-        [Branch 2 Expensess],
-        [Disel Expense],
-        [Donation],
-        [General Expenses],
-        [Stationary Expense],
-        [Teaching Staff Salary],
+        Month,';
+
+    -- Dynamically add the expense types to the final SELECT statement
+    SET @cursor = CURSOR FOR
+        SELECT DISTINCT EXPENSE_TYPE
+        FROM SLN_EXPENSE;
+
+    OPEN @cursor;
+    FETCH NEXT FROM @cursor INTO @expense_types;
+
+    -- Dynamically add the expense types to the final SELECT statement
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+        SET @sql = @sql + '[' + @expense_types + '],';
+        FETCH NEXT FROM @cursor INTO @expense_types;
+    END;
+
+    -- Close and deallocate the cursor
+    CLOSE @cursor;
+    DEALLOCATE @cursor;
+
+    -- Remove the trailing comma from the last expense type
+    SET @sql = LEFT(@sql, LEN(@sql) - 1);
+
+    -- Add the Total_Amount column to the final SELECT statement
+    SET @sql = @sql + ',
         Total_Amount
     FROM CTE_Expense
     ORDER BY Year DESC, MonthNum DESC;';
