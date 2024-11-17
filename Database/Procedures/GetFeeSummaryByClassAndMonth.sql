@@ -25,7 +25,8 @@ BEGIN
     -- Cursor to iterate over distinct fee types
     SET @cursor = CURSOR FOR
         SELECT DISTINCT FEE_TYPE
-        FROM SLN_FEE;
+        FROM SLN_FEE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @fee_type;
@@ -52,6 +53,7 @@ BEGIN
             MONTH(PAID_DATE) AS MonthNum
         FROM SLN_FEE
         WHERE PAID_DATE >= DATEADD(MONTH, -12, GETDATE())  -- Limit to last 12 months
+		AND IS_DELETED=0
         GROUP BY YEAR(PAID_DATE), MONTH(PAID_DATE), CLASS
 
         UNION ALL
@@ -63,7 +65,8 @@ BEGIN
     -- Reuse the same dynamic SUM statements for the total row
     SET @cursor = CURSOR FOR
         SELECT DISTINCT FEE_TYPE
-        FROM SLN_FEE;
+        FROM SLN_FEE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @fee_type;
@@ -90,6 +93,7 @@ BEGIN
             NULL AS MonthNum
         FROM SLN_FEE
         WHERE PAID_DATE >= DATEADD(MONTH, -12, GETDATE())
+		AND IS_DELETED=0
     )
     SELECT
         Month,
@@ -98,7 +102,8 @@ BEGIN
     -- Dynamically add the fee type columns in the final SELECT statement
     SET @cursor = CURSOR FOR
         SELECT DISTINCT FEE_TYPE
-        FROM SLN_FEE;
+        FROM SLN_FEE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @fee_type;

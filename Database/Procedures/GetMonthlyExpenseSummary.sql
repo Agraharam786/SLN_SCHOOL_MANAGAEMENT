@@ -25,7 +25,8 @@ BEGIN
     -- Cursor to iterate over distinct expense types
     SET @cursor = CURSOR FOR
         SELECT DISTINCT EXPENSE_TYPE
-        FROM SLN_EXPENSE;
+        FROM SLN_EXPENSE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @expense_types;
@@ -52,6 +53,7 @@ BEGIN
             MONTH(ENTRY_DATE) AS MonthNum
         FROM SLN_EXPENSE
         WHERE ENTRY_DATE >= DATEADD(MONTH, -12, GETDATE())  -- Limit to last 12 months
+		AND IS_DELETED=0
         GROUP BY YEAR(ENTRY_DATE), MONTH(ENTRY_DATE)
 
         UNION ALL
@@ -63,7 +65,8 @@ BEGIN
     -- Reuse the same dynamic SUM statements for the total row
     SET @cursor = CURSOR FOR
         SELECT DISTINCT EXPENSE_TYPE
-        FROM SLN_EXPENSE;
+        FROM SLN_EXPENSE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @expense_types;
@@ -90,6 +93,7 @@ BEGIN
             NULL AS MonthNum
         FROM SLN_EXPENSE
         WHERE ENTRY_DATE >= DATEADD(MONTH, -12, GETDATE())
+		AND IS_DELETED=0
     )
     SELECT
         Month,';
@@ -97,7 +101,8 @@ BEGIN
     -- Dynamically add the expense types to the final SELECT statement
     SET @cursor = CURSOR FOR
         SELECT DISTINCT EXPENSE_TYPE
-        FROM SLN_EXPENSE;
+        FROM SLN_EXPENSE
+		WHERE IS_DELETED=0;
 
     OPEN @cursor;
     FETCH NEXT FROM @cursor INTO @expense_types;

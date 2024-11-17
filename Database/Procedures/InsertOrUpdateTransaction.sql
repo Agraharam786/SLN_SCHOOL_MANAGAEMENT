@@ -1,0 +1,63 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+DROP PROCEDURE IF EXISTS InsertOrUpdateTransaction
+GO
+CREATE PROCEDURE dbo.InsertOrUpdateTransaction
+    @TRANSACTION_ID INT = NULL,  -- Use NULL for insert, provide an ID for update
+    @TRANSACTION_FROM VARCHAR(50),
+    @TRANSACTION_TO VARCHAR(50),
+    @TRANSACTION_AMOUNT DECIMAL(18, 2),
+    @TRANSACTION_DATE DATETIME,
+    @DESCRIPTION VARCHAR(MAX),
+    @DEPOSITED_BY VARCHAR(50),
+	@IS_DELETED bit = 0,
+    @LST_UPDATED_ID VARCHAR(50) ='Admin'
+AS
+BEGIN
+    IF @TRANSACTION_ID IS NULL  -- Insert if ID is NULL
+    BEGIN
+        INSERT INTO dbo.SLN_BANK_TRANSACTIONS
+        (
+            TRANSACTION_FROM, 
+            TRANSACTION_TO, 
+            TRANSACTION_AMOUNT,
+            TRANSACTION_DATE, 
+            [DESCRIPTION], 
+            DEPOSITED_BY,
+			IS_DELETED,
+            LST_UPDATED_TMSP, 
+            LST_UPATED_ID
+        )
+        VALUES
+        (
+            @TRANSACTION_FROM, 
+            @TRANSACTION_TO, 
+            @TRANSACTION_AMOUNT,
+            @TRANSACTION_DATE, 
+            @DESCRIPTION, 
+            @DEPOSITED_BY, 
+			@IS_DELETED,
+            GETDATE(), 
+            @LST_UPDATED_ID
+        );
+    END
+    ELSE  -- Update if ID is provided
+    BEGIN
+        UPDATE dbo.SLN_BANK_TRANSACTIONS
+        SET
+            TRANSACTION_FROM = @TRANSACTION_FROM,
+            TRANSACTION_TO = @TRANSACTION_TO,
+            TRANSACTION_AMOUNT = @TRANSACTION_AMOUNT,
+            TRANSACTION_DATE = @TRANSACTION_DATE,
+            [DESCRIPTION] = @DESCRIPTION,
+            DEPOSITED_BY = @DEPOSITED_BY,
+			IS_DELETED =@IS_DELETED,
+            LST_UPDATED_TMSP = GETDATE(),
+            LST_UPATED_ID = @LST_UPDATED_ID
+        WHERE TRANSACTION_ID = @TRANSACTION_ID;
+    END
+END;
+GO
