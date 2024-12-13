@@ -31,6 +31,7 @@ BEGIN
                 CLASS = @CLASSNAME 
                 AND ACADEMIC_YEAR = @ACADEMIC_YEAR 
                 AND SECTION = @SECTION
+				AND FEE_TYPE IN('School Fee')  
             GROUP BY 
                 STUDENT_NAME, CLASS, ACADEMIC_YEAR, SECTION, FATHER_NAME
         )
