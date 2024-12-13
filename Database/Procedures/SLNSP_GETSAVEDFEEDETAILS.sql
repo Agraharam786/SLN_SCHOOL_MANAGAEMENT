@@ -33,8 +33,7 @@ BEGIN
 				,ADMISSION_ID  
 			  FROM SLN_FEE  
 			  Where IS_DELETED=0  
-			  ORDER BY FEE_ID DESC 
-
+			  ORDER BY PAID_DATE DESC 
 	
 END;
 
