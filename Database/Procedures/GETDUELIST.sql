@@ -30,9 +30,9 @@ BEGIN
     SELECT     
         A.FIRST_NAME,    
         A.CLASS,    
-        A.ACADEMIC_YEAR,    
-        ISNULL(F.TOTAL_FEE_PAID, 0) AS TOTAL_FEE_PAID,    
-        L.AMOUNT AS TOTAL_SCHOOL_FEE,  
+        A.ACADEMIC_YEAR,
+        L.AMOUNT AS TOTAL_SCHOOL_FEE, 
+		ISNULL(F.TOTAL_FEE_PAID, 0) AS FEE_PAID,
         (L.Amount - ISNULL(F.TOTAL_FEE_PAID, 0)) AS PENDING_AMOUNT,
         CASE     
             WHEN L.AMOUNT > 0 THEN     

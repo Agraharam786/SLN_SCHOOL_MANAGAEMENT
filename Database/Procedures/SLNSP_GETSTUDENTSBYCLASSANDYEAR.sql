@@ -24,7 +24,7 @@ BEGIN
                 ACADEMIC_YEAR,
                 SECTION,
                 FATHER_NAME,
-                SUM(PAID_AMOUNT) AS TOTAL_FEE_PAID 
+                SUM(PAID_AMOUNT) AS FEE_PAID 
             FROM 
                 SLN_FEE 
             WHERE 
@@ -38,26 +38,23 @@ BEGIN
         SELECT 
             A.FIRST_NAME,
             A.CLASS,
-            A.ACADEMIC_YEAR,
-            ISNULL(F.TOTAL_FEE_PAID, 0) AS TOTAL_FEE_PAID,
+            A.ACADEMIC_YEAR,            
             L.AMOUNT AS TOTAL_SCHOOL_FEE,
+			F.FEE_PAID,
+			case when IS_FREE_STUDENT = 1 then 0
+			when IS_HALF_FEE = 1 then (ISNULL(L.AMOUNT, 0)) / 2 - (ISNULL(F.FEE_PAID, 0))
+			else (ISNULL(L.AMOUNT, 0)) - (ISNULL(F.FEE_PAID, 0))
+			end AS PENDING_AMOUNT,
             CASE 
                 WHEN L.AMOUNT > 0 THEN 
-                    CAST(ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT AS DECIMAL(5, 2))
+                    CAST(ISNULL(F.FEE_PAID, 0) * 100.0 / L.AMOUNT AS DECIMAL(5, 2))
                 ELSE 
                     0.00
             END AS FEE_PAID_PERCENTAGE,
-            CASE 
-                WHEN ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT < 30 THEN 'Immediate Action Required'
-                WHEN ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT >= 30 
-                     AND ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT < 50 THEN 'Action Required'
-                WHEN ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT >= 50 
-                     AND ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT < 80 THEN 'Follow Up Required'
-                WHEN ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT >= 80 
-                     AND ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT < 100 THEN 'Attention Required'
-                WHEN ISNULL(F.TOTAL_FEE_PAID, 0) * 100.0 / L.AMOUNT = 100 THEN 'Cleared'
-                ELSE 'No Data'
-            END AS FOLLOWUP_ACTION_STATUS,			
+			A.DISCOUNT_AMOUNT,
+			case when A.IS_FEE_CLEAR = 1 then 'CLEAR' else 'Not Clear' end FEE_STATUS ,
+			case when A.IS_FREE_STUDENT = 1 then 'NO FEE' else '' end FREE_STUDENT ,
+			case when A.IS_HALF_FEE = 1 then 'HALF FEE' else '' end HALF_FEE ,        			
 			A.MOBILE_NUM   ,
 			A.SECTION ,
 			A.FATHER_NAME ,
@@ -77,16 +74,17 @@ BEGIN
             A.CLASS = @CLASSNAME 
             AND A.ACADEMIC_YEAR = @ACADEMIC_YEAR 
             AND A.SECTION = @SECTION
-			ORDER BY F.TOTAL_FEE_PAID
+			ORDER BY F.FEE_PAID
     END
     ELSE 
     BEGIN 
         SELECT TOP 0 
             FIRST_NAME,
             CLASS,
-            ACADEMIC_YEAR,
-            0 AS TOTAL_FEE_PAID,
+            ACADEMIC_YEAR,            
             0 AS TOTAL_SCHOOL_FEE,
+			0 AS FEE_PAID,
+			0 AS PENDING_AMOUNT,
             0 AS PERCENTAGE_PAID,
             'No Data' AS FEE_PAID_PERCENTAGE,
 			MOBILE_NUM   ,
@@ -108,5 +106,6 @@ GO
 	exec [SLNSP_GETSTUDENTSBYCLASSANDYEAR] 'Jr Inter','2024-2025','BiPC'
 	
 	exec [SLNSP_GETSTUDENTSBYCLASSANDYEAR] 'Jr Inter','2024-2025','CEC'
-	exec [SLNSP_GETSTUDENTSBYCLASSANDYEAR] '1','2024-2025','A'
+	exec [SLNSP_GETSTUDENTSBYCLASSANDYEAR] 'LKG','2024-2025','A'
+
 */
