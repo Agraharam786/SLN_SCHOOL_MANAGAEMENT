@@ -15,19 +15,17 @@ AS
 BEGIN
  SET NOCOUNT ON; -- Helps to reduce network traffic and improve performance
  			
-		SELECT  FEE_ID
+		SELECT  STUDENT_NAME
 				,FEE_TYPE
-				,STUDENT_NAME
-				,FATHER_NAME
-				,GENDER
-				,CLASS
-				,SECTION
 				,BILL_NUMBER
 				,PAID_AMOUNT
-				,[DESCRIPTION]
-				,ACADEMIC_YEAR				
 				,PAID_DATE	
+				,[DESCRIPTION]
+				,FATHER_NAME
 				,VILLAGE_NAME
+				,GENDER
+				,ACADEMIC_YEAR				
+				,FEE_ID
 				,ADMISSION_ID
 		FROM SLN_FEE
 		where  STUDENT_NAME =@STUDENT_NAME 

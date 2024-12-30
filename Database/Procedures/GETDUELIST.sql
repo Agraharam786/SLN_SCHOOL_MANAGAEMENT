@@ -23,7 +23,7 @@ BEGIN
         FROM     
             SLN_FEE     
         WHERE     
-            FEE_TYPE IN('School Fee')  
+            FEE_TYPE IN('School Fee')   AND CLASS NOT IN ('DROPPED')
         GROUP BY     
             STUDENT_NAME, CLASS, ACADEMIC_YEAR, SECTION, FATHER_NAME    
     )
@@ -55,6 +55,7 @@ BEGIN
     LEFT JOIN SLN_FEEAMOUNT_LKP L ON A.CLASS = L.CLASS     
         AND A.ACADEMIC_YEAR = L.ACADEMIC_YEAR     
         AND L.FEE_TYPE = 'School Fee' -- Adjust fee type if needed 
+		WHERE A.CLASS NOT IN('DROPPED')
     ORDER BY 
         PENDING_AMOUNT DESC,  -- Outstanding due students first
         A.CLASS, 
