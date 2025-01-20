@@ -56,6 +56,7 @@ BEGIN
         AND A.ACADEMIC_YEAR = L.ACADEMIC_YEAR     
         AND L.FEE_TYPE = 'School Fee' -- Adjust fee type if needed 
 		WHERE A.CLASS NOT IN('DROPPED')
+		AND  A.IS_FEE_CLEAR =0  --Added to skip free studends
     ORDER BY 
         PENDING_AMOUNT DESC,  -- Outstanding due students first
         A.CLASS, 
