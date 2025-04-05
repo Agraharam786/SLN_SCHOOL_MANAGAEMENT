@@ -1,0 +1,30 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+DROP PROCEDURE IF EXISTS GetYearlyFeeSummary
+GO
+CREATE PROCEDURE GetYearlyFeeSummary
+AS
+BEGIN
+    -- Main query with UNION ALL for total row
+  with CTE AS(  SELECT 
+        FEE_TYPE,
+        SUM(PAID_AMOUNT) AS FEE_PAID
+    FROM SLN_FEE
+    WHERE IS_DELETED = 0
+    GROUP BY FEE_TYPE
+
+    UNION ALL
+
+    SELECT 
+        'Total' AS FEE_TYPE,
+        SUM(PAID_AMOUNT) AS FEE_PAID
+    FROM SLN_FEE
+    WHERE IS_DELETED = 0)
+
+	select * from CTE order by FEE_PAID
+    
+        
+END;
+GO
