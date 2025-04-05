@@ -7,17 +7,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLN_FEE_MANAGEMENT", "SLN_F
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SLN_FEE_MANAGEMENT_SOFTWARE", "..\SLN_FEE_MANAGEMENT_SOFTWARE\SLN_FEE_MANAGEMENT_SOFTWARE.vdproj", "{B755D26E-296F-4D8E-BD2A-70265EF7F949}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{688866C1-9323-415E-88EA-C65479DCC413}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\hp\Downloads\SLN_icon.ico = C:\Users\hp\Downloads\SLN_icon.ico
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B755D26E-296F-4D8E-BD2A-70265EF7F949}.Debug|Any CPU.ActiveCfg = Release
+		{B755D26E-296F-4D8E-BD2A-70265EF7F949}.Debug|Any CPU.ActiveCfg = Debug
 		{B755D26E-296F-4D8E-BD2A-70265EF7F949}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution

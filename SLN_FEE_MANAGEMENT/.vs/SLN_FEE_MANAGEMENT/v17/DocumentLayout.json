@@ -3,52 +3,120 @@
   "WorkspaceRootPath": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|d:\\workspace\\sln_fee_management\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\emailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\emailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|d:\\workspace\\sln_fee_management\\forms\\emailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\emailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\collectionreportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\collectionreportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|d:\\workspace\\sln_fee_management\\forms\\feecollectionpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feecollectionpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|d:\\workspace\\sln_fee_management\\forms\\feecollectionpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feecollectionpercentageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\generatestudendfeereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\generatestudendfeereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\collectionreportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\collectionreportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\generatestudendfeereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\generatestudendfeereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\discountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\discountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\discountform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\discountform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\expenseentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\expenseentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\feeentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feeentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\expenseentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\expenseentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\feeentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feeentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\busduelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\busduelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\collectionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\collectionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\collectionentryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\collectionentryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\models\\bankingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:models\\bankingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\bulkinsertstudentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\bulkinsertstudentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\banktransactionsentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\banktransactionsentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\banktransactionsentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\banktransactionsentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\sln_fee_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:sln_fee_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\monthlyfeesummaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\monthlyfeesummaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\classwisemonthlyreportgeneartionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\classwisemonthlyreportgeneartionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\classwisemonthlyreportgeneartionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\classwisemonthlyreportgeneartionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\monthlyexpensesummaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\monthlyexpensesummaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\classwisefeereportform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\classwisefeereportform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\feereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|D:\\Workspace\\SLN_FEE_MANAGEMENT\\forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FBB496-F8D3-4733-A97E-F1BE34C067FC}|SLN_FEE_MANAGEMENT.csproj|solutionrelative:forms\\expensereportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,145 +129,351 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CollectionReportsForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\CollectionReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionReportsForm.cs [Design]",
-              "RelativeToolTip": "Forms\\CollectionReportsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T18:42:57.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FeeReportsForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\FeeReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs [Design]",
-              "RelativeToolTip": "Forms\\FeeReportsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T16:34:43.71Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Common.cs",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Common.cs",
-              "RelativeDocumentMoniker": "Common.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Common.cs",
-              "RelativeToolTip": "Common.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAlwCgAAAA6AAAA",
+              "Title": "FeeCollectionPercentageForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeCollectionPercentageForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FeeCollectionPercentageForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeCollectionPercentageForm.cs",
+              "RelativeToolTip": "Forms\\FeeCollectionPercentageForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T09:42:23.98Z"
+              "WhenOpened": "2025-03-16T15:32:57.923Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CollectionReportsForm.cs",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\CollectionReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionReportsForm.cs",
-              "RelativeToolTip": "Forms\\CollectionReportsForm.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAnwC0AAAAZAAAA",
+              "Title": "FeeCollectionPercentageForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeCollectionPercentageForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FeeCollectionPercentageForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeCollectionPercentageForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FeeCollectionPercentageForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T18:57:52.691Z"
+              "WhenOpened": "2025-03-16T15:32:52.136Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ExpenseReportsForm.cs",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\ExpenseReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs",
-              "RelativeToolTip": "Forms\\ExpenseReportsForm.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAD4vzwAAAA/AAAA",
+              "Title": "EmailForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\EmailForm.cs",
+              "RelativeDocumentMoniker": "Forms\\EmailForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\EmailForm.cs [Design]",
+              "RelativeToolTip": "Forms\\EmailForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T19:51:07.121Z"
+              "WhenOpened": "2025-03-16T14:12:55.999Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenerateStudendFeeReportForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\GenerateStudendFeeReportForm.cs",
+              "RelativeDocumentMoniker": "Forms\\GenerateStudendFeeReportForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\GenerateStudendFeeReportForm.cs [Design]",
+              "RelativeToolTip": "Forms\\GenerateStudendFeeReportForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T06:43:33.083Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "FeeReportsForm.cs",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\FeeReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs",
-              "RelativeToolTip": "Forms\\FeeReportsForm.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAuwGYAAAAAAAAA",
+              "Title": "DiscountForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\DiscountForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DiscountForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\DiscountForm.cs [Design]",
+              "RelativeToolTip": "Forms\\DiscountForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T16:49:41.809Z"
+              "WhenOpened": "2024-12-22T19:45:33.165Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-02-27T19:20:11.262Z",
+              "Title": "EmailForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\EmailForm.cs",
+              "RelativeDocumentMoniker": "Forms\\EmailForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\EmailForm.cs",
+              "RelativeToolTip": "Forms\\EmailForm.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAEwEYAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:09:00.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ExpenseReportsForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs",
-              "RelativeDocumentMoniker": "Forms\\ExpenseReportsForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs [Design]",
-              "RelativeToolTip": "Forms\\ExpenseReportsForm.cs [Design]",
+              "Title": "GenerateStudendFeeReportForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\GenerateStudendFeeReportForm.cs",
+              "RelativeDocumentMoniker": "Forms\\GenerateStudendFeeReportForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\GenerateStudendFeeReportForm.cs",
+              "RelativeToolTip": "Forms\\GenerateStudendFeeReportForm.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAAAKwAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T18:42:48.45Z"
+              "WhenOpened": "2024-12-30T06:43:40.696Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "DiscountForm.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\DiscountForm.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\DiscountForm.Designer.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\DiscountForm.Designer.cs",
+              "RelativeToolTip": "Forms\\DiscountForm.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T19:37:36.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FeeEntryForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeEntryForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FeeEntryForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeEntryForm.cs",
+              "RelativeToolTip": "Forms\\FeeEntryForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAnwJQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:30:26.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FeeEntryForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeEntryForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FeeEntryForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeEntryForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FeeEntryForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:32:13.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Forms\\Form1.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\Form1.cs [Design]",
+              "RelativeToolTip": "Forms\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:05:35.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Forms\\Form1.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\Form1.cs",
+              "RelativeToolTip": "Forms\\Form1.cs",
+              "ViewState": "AQIAAH0BAAAAAAAAAAAvwIwBAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T21:57:20.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ExpenseEntryForm.cs",
               "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseEntryForm.cs",
               "RelativeDocumentMoniker": "Forms\\ExpenseEntryForm.cs",
               "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseEntryForm.cs",
               "RelativeToolTip": "Forms\\ExpenseEntryForm.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAADgv2wAAAAJAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAlwJcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T09:39:51.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAACtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-16T17:47:23.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "CollectionEntryForm.cs",
               "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionEntryForm.cs",
               "RelativeDocumentMoniker": "Forms\\CollectionEntryForm.cs",
               "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionEntryForm.cs",
               "RelativeToolTip": "Forms\\CollectionEntryForm.cs",
-              "ViewState": "AQIAAM4AAAAAAAAAAAAEwN4AAAAFAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAvwIQAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T09:37:25.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExpenseEntryForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseEntryForm.cs",
-              "RelativeDocumentMoniker": "Forms\\ExpenseEntryForm.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseEntryForm.cs [Design]",
-              "RelativeToolTip": "Forms\\ExpenseEntryForm.cs [Design]",
+              "DocumentIndex": 13,
+              "Title": "BusDueListForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BusDueListForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BusDueListForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BusDueListForm.cs",
+              "RelativeToolTip": "Forms\\BusDueListForm.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAvwHMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T19:51:58.613Z"
+              "WhenOpened": "2024-12-15T11:06:04.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CollectionEntryForm.Designer.cs",
-              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionEntryForm.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\CollectionEntryForm.Designer.cs",
-              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\CollectionEntryForm.Designer.cs",
-              "RelativeToolTip": "Forms\\CollectionEntryForm.Designer.cs",
-              "ViewState": "AQIAAOEAAAAAAAAAAAAlwPMAAABRAAAA",
+              "DocumentIndex": 16,
+              "Title": "BankingModel.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Models\\BankingModel.cs",
+              "RelativeDocumentMoniker": "Models\\BankingModel.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Models\\BankingModel.cs",
+              "RelativeToolTip": "Models\\BankingModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T19:12:19.182Z"
+              "WhenOpened": "2024-11-17T17:46:53.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BulkInsertStudentDetails.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BulkInsertStudentDetails.cs",
+              "RelativeDocumentMoniker": "Forms\\BulkInsertStudentDetails.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BulkInsertStudentDetails.cs [Design]",
+              "RelativeToolTip": "Forms\\BulkInsertStudentDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T05:41:59.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BankTransactionsEntryForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BankTransactionsEntryForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BankTransactionsEntryForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BankTransactionsEntryForm.cs [Design]",
+              "RelativeToolTip": "Forms\\BankTransactionsEntryForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T21:40:00.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BankTransactionsEntryForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BankTransactionsEntryForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BankTransactionsEntryForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\BankTransactionsEntryForm.cs",
+              "RelativeToolTip": "Forms\\BankTransactionsEntryForm.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAAwGIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T21:55:22.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SLN_FEE_MANAGEMENT.csproj",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\SLN_FEE_MANAGEMENT.csproj",
+              "RelativeDocumentMoniker": "SLN_FEE_MANAGEMENT.csproj",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\SLN_FEE_MANAGEMENT.csproj",
+              "RelativeToolTip": "SLN_FEE_MANAGEMENT.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-16T22:03:04.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClassWiseMonthlyReportgeneartionForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "RelativeToolTip": "Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBMAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T20:59:25.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MonthlyFeeSummaryReportForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\MonthlyFeeSummaryReportForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MonthlyFeeSummaryReportForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\MonthlyFeeSummaryReportForm.cs",
+              "RelativeToolTip": "Forms\\MonthlyFeeSummaryReportForm.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAiwA8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T20:59:56.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ClassWiseMonthlyReportgeneartionForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ClassWiseMonthlyReportgeneartionForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseMonthlyReportgeneartionForm.cs [Design]",
+              "RelativeToolTip": "Forms\\ClassWiseMonthlyReportgeneartionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T20:59:15.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MonthlyExpenseSummaryReportForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\MonthlyExpenseSummaryReportForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MonthlyExpenseSummaryReportForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\MonthlyExpenseSummaryReportForm.cs",
+              "RelativeToolTip": "Forms\\MonthlyExpenseSummaryReportForm.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T20:22:04.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAMwA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:46:37.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClassWiseFeeReportForm.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseFeeReportForm.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ClassWiseFeeReportForm.Designer.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ClassWiseFeeReportForm.Designer.cs",
+              "RelativeToolTip": "Forms\\ClassWiseFeeReportForm.Designer.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAlwH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T19:28:11.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ExpenseReportsForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ExpenseReportsForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\ExpenseReportsForm.cs",
+              "RelativeToolTip": "Forms\\ExpenseReportsForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T20:51:32.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FeeReportsForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FeeReportsForm.cs",
+              "ToolTip": "D:\\Workspace\\SLN_FEE_MANAGEMENT\\Forms\\FeeReportsForm.cs",
+              "RelativeToolTip": "Forms\\FeeReportsForm.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAvwFMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:49:41.809Z"
             }
           ]
         }

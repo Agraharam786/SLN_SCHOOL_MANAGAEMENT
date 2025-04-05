@@ -77,8 +77,9 @@ namespace SLN_FEE_MANAGEMENT.Forms
                     collectionModel.CollectionType = this.CollectionTypeComboBox.SelectedValue.ToString();
                     collectionModel.Description = this.DescTextBox.Text.Trim();
                     collectionModel.CollectionAmount = CollectionAmount;
-                    collectionModel.BankDepositAmount = Convert.ToInt32(this.bankDepositTextBox.Text.Trim());
-                    collectionModel.Incash = Convert.ToInt32(this.InCashTextBox.Text.Trim());
+                    collectionModel.BankDepositAmount = string.IsNullOrEmpty(this.bankDepositTextBox.Text) ? 0 : Convert.ToInt32(this.bankDepositTextBox.Text);  //Convert.ToInt32(this.bankDepositTextBox.Text.Trim());
+                    //collectionModel.Incash = Convert.ToInt32(this.InCashTextBox.Text.Trim());
+                    collectionModel.Incash = string.IsNullOrEmpty(this.bankDepositTextBox.Text) || this.bankDepositTextBox.Text == "0"? CollectionAmount : Convert.ToInt32(this.InCashTextBox.Text.Trim());
                     collectionModel.EntryDate = DateTime.ParseExact(dateTimePicker1.Value.ToString("yyyyMMdd"), "yyyyMMdd", CultureInfo.InvariantCulture);
                     collectionModel.IsDeleted = false;
 
@@ -116,7 +117,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
             this.CollectionId = 0;
             this.SaveButton.Enabled = false;
             this.DeleteButton.Enabled = false;
-            this.bankDepositTextBox.Text = string.Empty;
+            this.bankDepositTextBox.Text = "0";
             this.InCashTextBox.Text = string.Empty;
             LoadCollectionSummaryDetails();
         }
@@ -232,7 +233,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
 
             if (!string.IsNullOrEmpty(this.AmountTextBox.Text) && (Convert.ToInt32(this.AmountTextBox.Text) > 0))
             {
-                int bankDepositedAmount = Convert.ToInt32(this.bankDepositTextBox.Text);
+                int bankDepositedAmount = string.IsNullOrEmpty(this.bankDepositTextBox.Text) ? 0 : Convert.ToInt32(this.bankDepositTextBox.Text); 
                 
                 if(bankDepositedAmount>collectionAmount)
                     MessageBox.Show("Deposit Amount is greater than Collection Amount ", "Validation Message", MessageBoxButtons.OK);

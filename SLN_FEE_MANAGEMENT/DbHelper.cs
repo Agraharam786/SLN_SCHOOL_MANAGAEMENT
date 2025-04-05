@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using static System.Collections.Specialized.BitVector32;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -92,6 +93,23 @@ namespace SLN_FEE_MANAGEMENT
             };
             return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
         }
+
+      
+        public int SaveBankingDataModel(string procedureName, BankingModel transaction)
+        {
+            SqlParameter[] parameters = {
+                     new SqlParameter("@TRANSACTION_ID", transaction.TransactionId ?? (object)DBNull.Value),  // Handle nullable int
+                     new SqlParameter("@TRANSACTION_FROM", transaction.TransactionFrom),
+                     new SqlParameter("@TRANSACTION_TO", transaction.TransactionTo),
+                     new SqlParameter("@TRANSACTION_AMOUNT", transaction.TransactionAmount),
+                     new SqlParameter("@TRANSACTION_DATE", transaction.TransactionDate),
+                     new SqlParameter("@DESCRIPTION", transaction.Description ?? (object)DBNull.Value),  // Handle nullable string
+                     new SqlParameter("@DEPOSITED_BY", transaction.DepositedBy ?? (object)DBNull.Value)  // Handle nullable string
+             };
+            return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
+        }
+
+
         public DataSet GetCollectionDetails(string procedureName,bool fetchAllData)
         {
             // Assuming you have a stored procedure that filters students based on these parameters
@@ -175,6 +193,14 @@ namespace SLN_FEE_MANAGEMENT
         {
             SqlParameter[] parameters = {
                 new SqlParameter("@Collection_Id", collection_id)
+            };
+            return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
+        }
+
+        public int DeleteBankDetails(string procedureName, int transaction_id)
+        {
+            SqlParameter[] parameters = {
+                new SqlParameter("@TRANSACTION_ID", transaction_id)
             };
             return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
         }

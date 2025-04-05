@@ -1,16 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\BankTransactionsEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\BulkInsertStudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\BusDueListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ClassWiseFeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ClassWiseMonthlyReportgeneartionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\CollectionEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\CollectionReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Collection_Fee_VerificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\DiscountForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\EmailForm.cs">
@@ -20,6 +35,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\ExpenseReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FeeCollectionPercentageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FeeDueList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\FeeEntryForm.cs">
@@ -32,6 +53,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\GenerateStudendFeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MonthlyCollectionReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MonthlyExpenseSummaryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MonthlyFeeSummaryReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -44,7 +44,68 @@ namespace SLN_FEE_MANAGEMENT
         public const string GenerateStudentFeeReportProcedure = "SLNSP_GETSTUDENTFEEREPORTS";
         public const string GenerateClassFeeReportProcedure = "SLNSP_GETCLASSFEEREPORTS";
 
-        public const string EmailSummaryProcedure = "SLNSP_GETEMAIL_FIANACIALSUMMARY"; 
+        public const string EmailSummaryProcedure = "SLNSP_GETEMAIL_FIANACIALSUMMARY";
+
+        public const string MonthlyCollectionSummaryProcedure = "GetMonthlyCollectionSummary";
+        public const string MonthlyExpenseSummaryProcedure = "GetMonthlyExpenseSummary";
+        public const string MonthlyFeeSummaryProcedure = "GetMonthlyFeeSummary";
+        public const string ClassandMonthlyFeeSummaryProcedure = "GetFeeSummaryByClassAndMonth";
+        public const string MonthlyTransactionSummary = "GetMonthlyTransactionSummaryForBank";
+
+        public const string InsertandUpdateBankDetails = "InsertOrUpdateTransaction";
+        public const string GetBankDetails = "SLNSP_GetBankTransactionDetails";
+        public const string DeleteBankDetails = "SLNSP_DeleteBankTransactionDetails";
+
+
+        public const string WeeklyCollectionSummaryProcedure = "GetWeeklyCollectionSummary";
+        public const string WeeklyExpenseSummaryProcedure = "GetWeeklyExpenseSummary";
+        public const string WeeklyFeeSummaryProcedure = "GetWeeklyFeeSummary";
+        public const string WeeklyClasswiseFeeSummaryProcedure = "GetFeeSummaryByClassAndWeek";
+        public const string WeeklyBankTransactionSummaryProcedure = "GetWeeklyTransactionSummaryForBank";
+
+        public const string DailyFeeClassWiseSummaryProcedure = "GetFeeSummaryByClassAndDay";
+        public const string DailyBankTransactionSummaryProcedure = "GetDailyTransactionSummaryForBank";
+
+        //Displaying in home page
+        public const string ClassWiseLast5MonthsFeePaidSummary = "GetFeeSummaryByClassAndMonthWithFilters";
+
+        //To get Predicted And collected fee in a class
+        public const string ClassWiseFeePredictedAndActualDetails = "GetClassFeePredictedAndActuals";
+        //To get Predicted And collected fee for all class
+        public const string AllClassFeePredictedAndActualDetails = "GetAllClassFeePredictedAndActuals";
+
+        //To get the due list for all classes
+        public const string GetDueList = "GETDUELIST";
+
+        //To see the Discrepancies between Fee paid and Collection amount
+        public const string GetDiscrepanciesDetails = "Get_Discrepancies_In_Paid_Collection";
+
+        //To view the bus Fee details
+        public const string GetBusFeeDetails = "Get_Bus_Fee_Details";
+
+        //To get the default view while load
+        public const string GetDefaultBusFeeDetails = "Get_Default_Bus_Fee_Details";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

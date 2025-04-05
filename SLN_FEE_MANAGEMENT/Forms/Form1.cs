@@ -2,6 +2,7 @@ using SLN_FEE_MANAGEMENT.Forms;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace SLN_FEE_MANAGEMENT
 {
@@ -13,9 +14,12 @@ namespace SLN_FEE_MANAGEMENT
         private string? Section = string.Empty;
         private string? ClassName = string.Empty;
         DataSet dsEmployee = new DataSet();
+        DataSet dsClassSummary = new DataSet();
+        DataSet dsPaidPercentageSummary = new DataSet();
         public MainForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             dbHelper = new DbHelper();
             GetClassDetailsForComboBox();
             GetAcademicYearDetailsForComboBox();
@@ -37,9 +41,25 @@ namespace SLN_FEE_MANAGEMENT
             }
 
         }
-
+        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    int index = e.RowIndex;
+        //    DataGridViewRow row = dataGridView1.Rows[index];
+        //    if (row != null && (!string.IsNullOrEmpty(row.Cells[0].Value.ToString())))
+        //    {
+        //        ExpenseId = Convert.ToInt32(row.Cells[0].Value);
+        //        UnEditedAmount = Convert.ToInt32(row.Cells[3].Value.ToString());
+        //        ExpenseTypeComboBox.SelectedValue = row.Cells[1].Value;
+        //        DescTextBox.Text = row.Cells[2].Value.ToString();
+        //        AmountTextBox.Text = UnEditedAmount.ToString();
+        //        dateTimePicker1.Value = DateTime.Parse(row.Cells[4].Value.ToString());
+        //        DeleteButton.Enabled = true;
+        //    }
+        //    else
+        //        DeleteButton.Enabled = false;
+        //}
         private void GetGridData()
-        {            
+        {
             dsEmployee = dbHelper.GetStudentDetailsByClass(Common.GetStudentDetailsProcedure, className, academicYear, Section);
             if (dsEmployee.Tables[0].Rows.Count > 0)
             {
@@ -56,6 +76,35 @@ namespace SLN_FEE_MANAGEMENT
                 // MessageBox.Show("No Data Available for the Selection", "SLN VALIDATIONS", MessageBoxButtons.OK);
             }
 
+            dsClassSummary = dbHelper.GetStudentDetailsByClass(Common.ClassWiseLast5MonthsFeePaidSummary, className, academicYear, Section);
+            if (dsClassSummary.Tables[0].Rows.Count > 0)
+            {
+                dataGridView2.DataSource = dsClassSummary.Tables[0].DefaultView;
+            }
+            else
+            {
+
+                for (int i = 1; i <= 2; i++)
+                {
+                    dsClassSummary.Tables[0].Rows.Add();
+                }
+                dataGridView2.DataSource = dsClassSummary.Tables[0].DefaultView;
+            }
+
+            dsPaidPercentageSummary = dbHelper.GetStudentDetailsByClass(Common.ClassWiseFeePredictedAndActualDetails, className, academicYear, Section);
+            if (dsPaidPercentageSummary.Tables[0].Rows.Count > 0)
+            {
+                dataGridView3.DataSource = dsPaidPercentageSummary.Tables[0].DefaultView;
+            }
+            else
+            {
+
+                for (int i = 1; i <= 1; i++)
+                {
+                    dsPaidPercentageSummary.Tables[0].Rows.Add();
+                }
+                dataGridView3.DataSource = dsPaidPercentageSummary.Tables[0].DefaultView;
+            }
         }
 
         //private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -280,6 +329,72 @@ namespace SLN_FEE_MANAGEMENT
         {
             EmailForm email = new EmailForm();
             email.Show();
+        }
+
+        private void monthlyCollectionSummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonthlyCollectionReportForm monthlyCollectionReportForm = new MonthlyCollectionReportForm();
+            monthlyCollectionReportForm.Show();
+
+        }
+
+        private void monthlyExpenseSummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonthlyExpenseSummaryReportForm monthlyExpenseSummaryReport = new MonthlyExpenseSummaryReportForm();
+            monthlyExpenseSummaryReport.Show();
+        }
+
+        private void monthlyFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonthlyFeeSummaryReportForm monthlyFeeSummaryReportForm = new MonthlyFeeSummaryReportForm();
+            monthlyFeeSummaryReportForm.Show();
+        }
+
+        private void classWiseMonthlySummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClassWiseMonthlyReportgeneartionForm classWiseMonthlyReportgeneartionForm = new ClassWiseMonthlyReportgeneartionForm();
+            classWiseMonthlyReportgeneartionForm.Show();
+        }
+
+        private void bankTransactionsEntryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BankTransactionsEntryForm bankTransactionsEntryForm = new BankTransactionsEntryForm();
+            bankTransactionsEntryForm.Show();
+        }
+
+        private void studentReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void feeCollectionPercentageReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FeeCollectionPercentageForm feeCollectionPercentageForm = new FeeCollectionPercentageForm();
+            feeCollectionPercentageForm.Show();
+        }
+
+        private void feeDueReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FeeDueList feeDueList = new FeeDueList();
+            feeDueList.Show();
+        }
+
+        private void verifyCollectionToFeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Collection_Fee_VerificationForm verificationForm = new Collection_Fee_VerificationForm();
+            verificationForm.Show();
+        }
+
+        private void busDueListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BusDueListForm busDueListForm = new BusDueListForm();
+            busDueListForm.Show();
+        }
+
+        private void discountEntryFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DiscountForm discountForm = new DiscountForm();
+            discountForm.Show();
         }
     }
 }
