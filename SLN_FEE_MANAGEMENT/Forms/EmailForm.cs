@@ -74,6 +74,14 @@ namespace SLN_FEE_MANAGEMENT.Forms
                     ClassWiseFeeSummary = GetDynamicTableData(Common.ClassandMonthlyFeeSummaryProcedure);
                     BankTransactionSummary = GetDynamicTableData(Common.MonthlyTransactionSummary);
                 }
+                else if (reportType.Equals("Yearly"))
+                {
+                    // Get dynamic table rows for the financial summary table
+                    financialTableRows = GetDynamicTableData(Common.YearlyEmailSummaryProcedure);
+                    collectionSummary = GetDynamicTableData(Common.YearlyCollectionSummaryProcedure);
+                    expenseSummary = GetDynamicTableData(Common.YearlyExpenseSummaryProcedure);
+                    FeeSummary = GetDynamicTableData(Common.YearlyFeeSummaryProcedure);
+                }
                 else
                 {
                     financialTableRows = GetDynamicTableData(Common.EmailSummaryProcedure);

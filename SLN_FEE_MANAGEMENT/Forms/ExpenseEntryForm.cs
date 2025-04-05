@@ -16,6 +16,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
     {
         private SLN_FEE_MANAGEMENT.DbHelper dbHelper;
         private string ExpenseType = String.Empty;
+        private string ExpenseFrom = String.Empty;
         private int ExpenseId = 0;
         private int UnEditedAmount = 0;
         public ExpenseEntryForm()
@@ -66,6 +67,7 @@ namespace SLN_FEE_MANAGEMENT.Forms
                         expeseModel.ExpenseId = this.ExpenseId;
                     }
                     expeseModel.ExpenseType = this.ExpenseTypeComboBox.SelectedValue.ToString();
+                    expeseModel.ExpenseFrom = this.ExpenseFromComboBox.SelectedItem.ToString();
                     expeseModel.Description = this.DescTextBox.Text.Trim();
                     expeseModel.ExpenseAmount = ExpenseAmount;
                     expeseModel.EntryDate = DateTime.ParseExact(dateTimePicker1.Value.ToString("yyyyMMdd"), "yyyyMMdd", CultureInfo.InvariantCulture);
@@ -97,7 +99,8 @@ namespace SLN_FEE_MANAGEMENT.Forms
 
         private void ClearAllFileds()
         {
-            this.ExpenseTypeComboBox.SelectedValue = string.Empty; ;
+            this.ExpenseTypeComboBox.SelectedValue = string.Empty;
+            this.ExpenseFromComboBox.SelectedValue = string.Empty;
             this.DescTextBox.Text = string.Empty;
             this.AmountTextBox.Text = string.Empty;
             this.dateTimePicker1.Value = DateTime.Now;
@@ -140,11 +143,12 @@ namespace SLN_FEE_MANAGEMENT.Forms
             if (row != null && (!string.IsNullOrEmpty(row.Cells[0].Value.ToString())))
             {
                 ExpenseId = Convert.ToInt32(row.Cells[0].Value);
-                UnEditedAmount = Convert.ToInt32(row.Cells[3].Value.ToString());
-                ExpenseTypeComboBox.SelectedValue = row.Cells[1].Value;
-                DescTextBox.Text = row.Cells[2].Value.ToString();
+                ExpenseFromComboBox.SelectedValue = row.Cells[1].Value;
+                ExpenseTypeComboBox.SelectedValue = row.Cells[2].Value;
+                DescTextBox.Text = row.Cells[3].Value.ToString();
+                UnEditedAmount = Convert.ToInt32(row.Cells[4].Value.ToString());
+                dateTimePicker1.Value = DateTime.Parse(row.Cells[5].Value.ToString());
                 AmountTextBox.Text = UnEditedAmount.ToString();
-                dateTimePicker1.Value = DateTime.Parse(row.Cells[4].Value.ToString());
                 DeleteButton.Enabled = true;
             }
             else
@@ -220,6 +224,19 @@ namespace SLN_FEE_MANAGEMENT.Forms
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ExpenseFromComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.ExpenseFromComboBox.SelectedItem != null)
+            {
+                this.ExpenseFrom = ExpenseFromComboBox.SelectedItem.ToString();
+            }
+        }
+
+        private void ExpenseEntryForm_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

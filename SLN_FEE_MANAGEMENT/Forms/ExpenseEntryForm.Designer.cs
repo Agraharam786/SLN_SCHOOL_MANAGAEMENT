@@ -49,6 +49,8 @@
             SaveButton = new Button();
             summaryDataGridView = new DataGridView();
             CloseButton = new Button();
+            ExpenseFromComboBox = new ComboBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)summaryDataGridView).BeginInit();
             SuspendLayout();
@@ -57,7 +59,7 @@
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(554, 475);
+            button1.Location = new Point(554, 488);
             button1.Name = "button1";
             button1.Size = new Size(119, 28);
             button1.TabIndex = 52;
@@ -89,7 +91,7 @@
             // 
             AddNewButton.BackColor = Color.DeepSkyBlue;
             AddNewButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AddNewButton.Location = new Point(27, 266);
+            AddNewButton.Location = new Point(27, 286);
             AddNewButton.Name = "AddNewButton";
             AddNewButton.Size = new Size(94, 28);
             AddNewButton.TabIndex = 49;
@@ -101,7 +103,7 @@
             // 
             ClearButton.BackColor = Color.LightCoral;
             ClearButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ClearButton.Location = new Point(208, 327);
+            ClearButton.Location = new Point(208, 338);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(95, 28);
             ClearButton.TabIndex = 48;
@@ -113,7 +115,7 @@
             // 
             DeleteButton.BackColor = Color.LightCoral;
             DeleteButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DeleteButton.Location = new Point(27, 327);
+            DeleteButton.Location = new Point(27, 338);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(94, 28);
             DeleteButton.TabIndex = 47;
@@ -136,18 +138,18 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 25;
-            dataGridView1.Location = new Point(399, 77);
+            dataGridView1.Location = new Point(399, 66);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(603, 372);
+            dataGridView1.Size = new Size(603, 399);
             dataGridView1.TabIndex = 46;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(150, 210);
+            dateTimePicker1.Location = new Point(150, 240);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(211, 21);
             dateTimePicker1.TabIndex = 45;
@@ -157,7 +159,7 @@
             // 
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.RoyalBlue;
-            label6.Location = new Point(12, 210);
+            label6.Location = new Point(12, 240);
             label6.Name = "label6";
             label6.Size = new Size(120, 28);
             label6.TabIndex = 44;
@@ -166,7 +168,7 @@
             // DescTextBox
             // 
             DescTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            DescTextBox.Location = new Point(150, 161);
+            DescTextBox.Location = new Point(150, 191);
             DescTextBox.Name = "DescTextBox";
             DescTextBox.Size = new Size(211, 22);
             DescTextBox.TabIndex = 43;
@@ -175,7 +177,7 @@
             // 
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.RoyalBlue;
-            label5.Location = new Point(12, 161);
+            label5.Location = new Point(12, 191);
             label5.Name = "label5";
             label5.Size = new Size(120, 28);
             label5.TabIndex = 42;
@@ -184,7 +186,7 @@
             // AmountTextBox
             // 
             AmountTextBox.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            AmountTextBox.Location = new Point(150, 119);
+            AmountTextBox.Location = new Point(150, 149);
             AmountTextBox.Name = "AmountTextBox";
             AmountTextBox.Size = new Size(211, 22);
             AmountTextBox.TabIndex = 41;
@@ -195,7 +197,7 @@
             // 
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.RoyalBlue;
-            label4.Location = new Point(12, 119);
+            label4.Location = new Point(12, 149);
             label4.Name = "label4";
             label4.Size = new Size(120, 28);
             label4.TabIndex = 40;
@@ -205,7 +207,7 @@
             // 
             ExpenseTypeComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ExpenseTypeComboBox.FormattingEnabled = true;
-            ExpenseTypeComboBox.Location = new Point(150, 80);
+            ExpenseTypeComboBox.Location = new Point(150, 110);
             ExpenseTypeComboBox.Name = "ExpenseTypeComboBox";
             ExpenseTypeComboBox.Size = new Size(211, 24);
             ExpenseTypeComboBox.TabIndex = 39;
@@ -215,7 +217,7 @@
             // 
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.RoyalBlue;
-            label1.Location = new Point(12, 80);
+            label1.Location = new Point(12, 110);
             label1.Name = "label1";
             label1.Size = new Size(120, 28);
             label1.TabIndex = 38;
@@ -225,7 +227,7 @@
             // 
             SaveButton.BackColor = Color.DeepSkyBlue;
             SaveButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SaveButton.Location = new Point(208, 266);
+            SaveButton.Location = new Point(208, 286);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(95, 28);
             SaveButton.TabIndex = 37;
@@ -242,7 +244,7 @@
             summaryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             summaryDataGridView.ColumnHeadersHeight = 25;
             summaryDataGridView.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            summaryDataGridView.Location = new Point(12, 370);
+            summaryDataGridView.Location = new Point(12, 384);
             summaryDataGridView.Name = "summaryDataGridView";
             summaryDataGridView.ReadOnly = true;
             summaryDataGridView.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -255,7 +257,7 @@
             // 
             CloseButton.BackColor = Color.LightCoral;
             CloseButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CloseButton.Location = new Point(827, 475);
+            CloseButton.Location = new Point(829, 488);
             CloseButton.Name = "CloseButton";
             CloseButton.Size = new Size(101, 28);
             CloseButton.TabIndex = 72;
@@ -263,12 +265,35 @@
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
             // 
+            // ExpenseFromComboBox
+            // 
+            ExpenseFromComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpenseFromComboBox.FormattingEnabled = true;
+            ExpenseFromComboBox.Items.AddRange(new object[] { "New Campus", "Old Campus", "PCG", "Primary", "Higher", "Junior College", "SLN Degree" });
+            ExpenseFromComboBox.Location = new Point(150, 66);
+            ExpenseFromComboBox.Name = "ExpenseFromComboBox";
+            ExpenseFromComboBox.Size = new Size(211, 24);
+            ExpenseFromComboBox.TabIndex = 74;
+            ExpenseFromComboBox.SelectedIndexChanged += ExpenseFromComboBox_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.RoyalBlue;
+            label7.Location = new Point(12, 66);
+            label7.Name = "label7";
+            label7.Size = new Size(120, 28);
+            label7.TabIndex = 73;
+            label7.Text = "Expense From:";
+            // 
             // ExpenseEntryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
-            ClientSize = new Size(1014, 530);
+            ClientSize = new Size(1014, 549);
+            Controls.Add(ExpenseFromComboBox);
+            Controls.Add(label7);
             Controls.Add(CloseButton);
             Controls.Add(summaryDataGridView);
             Controls.Add(button1);
@@ -289,6 +314,7 @@
             Controls.Add(SaveButton);
             Name = "ExpenseEntryForm";
             Text = "ExpenseEntryForm";
+            TextChanged += ExpenseEntryForm_TextChanged;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)summaryDataGridView).EndInit();
             ResumeLayout(false);
@@ -315,5 +341,7 @@
         private Button SaveButton;
         private DataGridView summaryDataGridView;
         private Button CloseButton;
+        private ComboBox ExpenseFromComboBox;
+        private Label label7;
     }
 }

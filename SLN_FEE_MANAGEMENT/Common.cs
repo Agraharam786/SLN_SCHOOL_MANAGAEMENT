@@ -63,6 +63,12 @@ namespace SLN_FEE_MANAGEMENT
         public const string WeeklyClasswiseFeeSummaryProcedure = "GetFeeSummaryByClassAndWeek";
         public const string WeeklyBankTransactionSummaryProcedure = "GetWeeklyTransactionSummaryForBank";
 
+        public const string YearlyEmailSummaryProcedure = "GET_YearlyFinancialSummary";
+        public const string YearlyCollectionSummaryProcedure = "GetCollectionYearlySummary";
+        public const string YearlyExpenseSummaryProcedure = "GetYearlyExpenseSummary";
+        public const string YearlyFeeSummaryProcedure = "GetYearlyFeeSummary";
+        
+
         public const string DailyFeeClassWiseSummaryProcedure = "GetFeeSummaryByClassAndDay";
         public const string DailyBankTransactionSummaryProcedure = "GetDailyTransactionSummaryForBank";
 

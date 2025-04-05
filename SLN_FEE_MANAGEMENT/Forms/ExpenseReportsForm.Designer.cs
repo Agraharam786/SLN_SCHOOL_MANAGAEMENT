@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             FromdateTimePicker = new DateTimePicker();
             label1 = new Label();
             TodateTimePicker = new DateTimePicker();
@@ -83,7 +83,7 @@
             // 
             ClearButton.BackColor = Color.LightCoral;
             ClearButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ClearButton.Location = new Point(172, 240);
+            ClearButton.Location = new Point(70, 339);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(95, 28);
             ClearButton.TabIndex = 92;
@@ -95,7 +95,7 @@
             // 
             CloseButton.BackColor = Color.LightCoral;
             CloseButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CloseButton.Location = new Point(287, 240);
+            CloseButton.Location = new Point(255, 339);
             CloseButton.Name = "CloseButton";
             CloseButton.Size = new Size(101, 28);
             CloseButton.TabIndex = 93;
@@ -107,7 +107,7 @@
             // 
             GetButton.BackColor = Color.DeepSkyBlue;
             GetButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GetButton.Location = new Point(25, 240);
+            GetButton.Location = new Point(151, 259);
             GetButton.Name = "GetButton";
             GetButton.Size = new Size(119, 28);
             GetButton.TabIndex = 91;
@@ -117,15 +117,15 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle6.BackColor = Color.AliceBlue;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.AliceBlue;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.BackgroundColor = Color.BurlyWood;
             dataGridView1.ColumnHeadersHeight = 25;
             dataGridView1.Location = new Point(419, 71);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridView1.Size = new Size(320, 197);
+            dataGridView1.Size = new Size(537, 296);
             dataGridView1.TabIndex = 95;
             // 
             // label10
@@ -163,7 +163,7 @@
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BurlyWood;
-            ClientSize = new Size(756, 286);
+            ClientSize = new Size(983, 413);
             Controls.Add(ExpenseTypeComboBox);
             Controls.Add(label4);
             Controls.Add(FromdateTimePicker);

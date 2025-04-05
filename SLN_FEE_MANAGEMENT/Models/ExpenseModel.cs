@@ -10,6 +10,7 @@ namespace SLN_FEE_MANAGEMENT.Models
     {
         public int ExpenseId { get; set; }
         public string? ExpenseType { get; set; }
+        public string? ExpenseFrom { get; set; }
         public string? Description { get; set; }
         public int ExpenseAmount { get; set; }
         public DateTime EntryDate { get; set; }

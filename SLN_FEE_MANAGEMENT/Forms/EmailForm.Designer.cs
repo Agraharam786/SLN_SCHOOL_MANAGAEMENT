@@ -71,7 +71,7 @@
             // 
             ReoprtTypeComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ReoprtTypeComboBox.FormattingEnabled = true;
-            ReoprtTypeComboBox.Items.AddRange(new object[] { "Daily", "Weekly", "Monthly" });
+            ReoprtTypeComboBox.Items.AddRange(new object[] { "Daily", "Weekly", "Monthly", "Yearly" });
             ReoprtTypeComboBox.Location = new Point(235, 96);
             ReoprtTypeComboBox.Name = "ReoprtTypeComboBox";
             ReoprtTypeComboBox.Size = new Size(242, 24);
