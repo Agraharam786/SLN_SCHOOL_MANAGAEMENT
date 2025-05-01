@@ -1,0 +1,19 @@
+IF OBJECT_ID('SLNSP_SLN_TRUNCATE_ADMISIONS_STG', 'P') IS NOT NULL
+	BEGIN
+		DROP PROCEDURE SLNSP_SLN_TRUNCATE_ADMISIONS_STG;
+	END
+	GO
+	CREATE PROCEDURE [dbo].[SLNSP_SLN_TRUNCATE_ADMISIONS_STG]
+AS
+BEGIN
+ SET NOCOUNT ON; -- Helps to reduce network traffic and improve performance
+ 
+	truncate table SLN_ADMISIONS_STG
+		
+END;
+
+
+/*
+	select * from SLN_ADMISIONS order by 1 desc
+		select * from SLN_ADMISIONS_STG
+*/
