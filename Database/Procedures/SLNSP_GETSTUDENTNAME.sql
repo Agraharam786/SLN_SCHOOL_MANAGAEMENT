@@ -8,7 +8,8 @@ GO
 CREATE PROCEDURE SLNSP_GETSTUDENTNAME
 	--@STUDENT_NAME Varchar(50), Commented to load entire student data while loading
 	@CLASS Varchar(10),
-	@SECTION Varchar(10)
+	@SECTION Varchar(10),
+	@ACADEMIC_YEAR varchar(10) ='2025-2026'
    
 AS
 BEGIN
@@ -25,6 +26,7 @@ BEGIN
 		SELECT FIRST_NAME
 		FROM SLN_ADMISIONS
 		where CLASS=@CLASS AND SECTION =@SECTION
+		AND ACADEMIC_YEAR ='2025-2026'
 
 	
 END;
