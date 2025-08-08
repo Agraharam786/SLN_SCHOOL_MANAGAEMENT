@@ -9,7 +9,7 @@ CREATE PROCEDURE SLNSP_GETSTUDENTNAME
 	--@STUDENT_NAME Varchar(50), Commented to load entire student data while loading
 	@CLASS Varchar(10),
 	@SECTION Varchar(10),
-	@ACADEMIC_YEAR varchar(10) ='2025-2026'
+	@ACADEMIC_YEAR varchar(10) ='2025-2026' --Need to fix this in feature
    
 AS
 BEGIN
@@ -26,7 +26,7 @@ BEGIN
 		SELECT FIRST_NAME
 		FROM SLN_ADMISIONS
 		where CLASS=@CLASS AND SECTION =@SECTION
-		AND ACADEMIC_YEAR ='2025-2026'
+		AND ACADEMIC_YEAR =@ACADEMIC_YEAR
 
 	
 END;
@@ -35,7 +35,7 @@ GO
 
 
 /*
-exec SLNSP_GETSTUDENTNAME 'UKG','A'
+exec SLNSP_GETSTUDENTNAME '2','A'
 exec SLNSP_GETSTUDENTNAME 'Jr Inter','MPC'
 select * from SLN_ADMISIONS
 
