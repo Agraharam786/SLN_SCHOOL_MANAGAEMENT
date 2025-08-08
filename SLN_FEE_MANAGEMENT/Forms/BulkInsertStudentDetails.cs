@@ -43,8 +43,38 @@ namespace SLN_FEE_MANAGEMENT.Forms
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            dbHelper.PerformBulkInsert(Common.BulkInsertProcedure, filePath);
-            GetInsertedData();
+            try
+            {
+                dbHelper.TruncateAdmision_STG(Common.Truncate_Admision_STG_Table);
+                DataTable dataTable = new DataTable();
+                dataTable = LoadCsvToDataTable(filePath);
+                dbHelper.BulkInsertDataTable(dataTable, "SLN_ADMISIONS_STG");
+                GetInsertedData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        static DataTable LoadCsvToDataTable(string csvFilePath)
+        {
+            DataTable dt = new DataTable();
+            using (StreamReader sr = new StreamReader(csvFilePath))
+            {
+                string[] headers = sr.ReadLine().Split(',');
+
+                foreach (string header in headers)
+                    dt.Columns.Add(header.Trim());
+
+                while (!sr.EndOfStream)
+                {
+                    string[] rows = sr.ReadLine().Split(',');
+                    dt.Rows.Add(rows);
+                }
+            }
+            return dt;
         }
 
         public void GetInsertedData()

@@ -144,11 +144,11 @@ namespace SLN_FEE_MANAGEMENT.Forms
             //}
 
         }
-        private void GetStudentNameComboBox(string className, string section)
+        private void GetStudentNameComboBox(string className, string section, string academicYear)
         {
             DataSet dsStudentType = new DataSet();
 
-            dsStudentType = dbHelper.GetStudentName(Common.GetStudentNameProcedure, this.ClassName, this.Section);
+            dsStudentType = dbHelper.GetStudentName(Common.GetStudentNameProcedure, this.ClassName, this.Section,this.AcdameicYear);
             if (dsStudentType.Tables[0].Rows.Count > 0)
             {
                 StudentNameComboBox.DataSource = dsStudentType.Tables[0].DefaultView;
@@ -421,9 +421,10 @@ namespace SLN_FEE_MANAGEMENT.Forms
         {
             this.ClassName = ClassComboBox.SelectedValue.ToString();
             this.Section = sectionComboBox.SelectedValue.ToString();
+            this.AcdameicYear = AcademicYearComboBox.SelectedValue.ToString();
             if (this.sectionComboBox.SelectedValue != null && (!string.IsNullOrEmpty(ClassName)))
             {
-                GetStudentNameComboBox(this.ClassName, this.Section);
+                GetStudentNameComboBox(this.ClassName, this.Section,this.AcdameicYear);
             }
         }
     }

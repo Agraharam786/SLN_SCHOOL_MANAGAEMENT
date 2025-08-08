@@ -62,6 +62,54 @@ namespace SLN_FEE_MANAGEMENT
             return resultDataSet;
         }
 
+        public void BulkInsertDataTable(DataTable dataTable, string destinationTable)
+        { 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
+                {
+                    bulkCopy.DestinationTableName = destinationTable;
+
+                    // Optional: map columns if needed
+                    // bulkCopy.ColumnMappings.Add("CsvColumn1", "DbColumn1");
+
+                    try
+                    {
+                        bulkCopy.WriteToServer(dataTable);
+                        Console.WriteLine("Bulk insert completed successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error during bulk insert: " + ex.Message);
+                        throw ex;
+                    }
+                }
+
+                //using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
+                //{
+                //    bulkCopy.DestinationTableName = destinationTable;
+
+                //    // Optional: auto map matching columns
+                //    foreach (DataColumn column in dataTable.Columns)
+                //    {
+                //        bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName);
+                //    }
+
+                //    try
+                //    {
+                //        bulkCopy.WriteToServer(dataTable);
+                //        Console.WriteLine("Bulk insert to table '" + destinationTable + "' completed successfully.");
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        Console.WriteLine("Bulk insert failed: " + ex.Message);
+                //    }
+                //}
+            }
+        }
+
         public int ExecuteNonQuery(string storedProc, SqlParameter[]? parameters = null)
         {
             int rowsAffected = 0;

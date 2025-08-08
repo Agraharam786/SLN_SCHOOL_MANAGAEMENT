@@ -93,6 +93,8 @@ namespace SLN_FEE_MANAGEMENT
         public const string GetDefaultBusFeeDetails = "Get_Default_Bus_Fee_Details";
 
 
+        public const string Truncate_Admision_STG_Table = "SLNSP_SLN_TRUNCATE_ADMISIONS_STG";
+
 
 
 

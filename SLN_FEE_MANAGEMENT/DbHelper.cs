@@ -72,6 +72,11 @@ namespace SLN_FEE_MANAGEMENT
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
 
+        public void BulkInsertDataTable(DataTable dataTable, string destinationTable)
+        {
+            UtilityInstance.BulkInsertDataTable(dataTable, destinationTable);
+        }
+
         public int LoadDataToTargetTable(string procedureName)
         {
             SqlParameter[] parameters = {};
@@ -205,6 +210,13 @@ namespace SLN_FEE_MANAGEMENT
             return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
         }
 
+        public int TruncateAdmision_STG(string procedureName)
+        {
+            SqlParameter[] parameters = {
+                };
+            return UtilityInstance.ExecuteNonQuery(procedureName, parameters);
+        }
+
         public int SaveFeeDataModel(string procedureName, FeeModel feeModel)
         {            
             SqlParameter[] parameters = new SqlParameter[]
@@ -251,12 +263,13 @@ namespace SLN_FEE_MANAGEMENT
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
 
-        public DataSet GetStudentName(string procedureName, string className, string section)
+        public DataSet GetStudentName(string procedureName, string className, string section, string academicYear)
         {
             SqlParameter[] parameters = {
                 //new SqlParameter("@STUDENT_NAME", StudentName),
                  new SqlParameter("@CLASS", className),
                  new SqlParameter("@SECTION", section),
+                 new SqlParameter("@ACADEMIC_YEAR", academicYear)
                 };
             return UtilityInstance.GetDataSet(procedureName, parameters);
         }
